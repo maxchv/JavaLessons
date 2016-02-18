@@ -21,7 +21,47 @@ public class UsingInterface {
 		animal.Method();
 		
 		Animal.StaticMethod();
+		
+		A a = new B();
+		
+		E e = new E();
+		e.finalMethod();
+		e.nonfinalMethod();
 	}
+}
+
+interface A {
+	
+}
+
+final class B implements A {
+	
+}
+
+//class C extends B {
+//	
+//}
+
+class D {
+	final void finalMethod() {
+		System.out.println("It method is implemented in class D");
+	}
+	
+	void nonfinalMethod() {
+		System.out.println("It method is implemented in class D");
+	}
+	
+}
+
+class E extends D {
+	@Override
+	void nonfinalMethod() {		
+		System.out.println("It method is implemented in class E");
+	}
+	
+//	void finalMethod() {
+//		System.out.println("It method is implemented in class E");
+//	}
 }
 
 interface Animal {
