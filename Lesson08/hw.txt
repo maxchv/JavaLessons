@@ -1,0 +1,37 @@
+
+Есть класс List:
+
+	class List {
+		Object[] obj;
+		int size = -1;
+		int cur = -1;
+		
+		List(int size) {
+			cur = 0;
+			this.size = size;
+			obj = new Object[size];
+		}
+		
+		void add(Object item) {			
+			obj[cur++] = item;
+		}
+
+		void removeLast() {			
+			obj[cur--] = null;			
+		}
+		
+		
+	}
+
+Реализовать класс ListException, EmptyListException и FullListException
+
+ListException является наследником класса Exception
+EmptyListException наследуюет класс ListException
+FullListException также наследуюет класс ListException
+
+В классе List добавить исключительную ситуацию в метод:
+	
+	- removeLast() на тот случай, если производится попытка удаления элемента
+	  из пустого массива obj (исключение типа EmptyListException)
+	  
+	- add() на тот случай, если массив obj полностью заполнен данными  (исключение типа FullListException)  
