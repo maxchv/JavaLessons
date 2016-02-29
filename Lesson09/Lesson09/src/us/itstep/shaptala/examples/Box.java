@@ -1,5 +1,7 @@
 package us.itstep.shaptala.examples;
 
+import java.time.LocalDate;
+
 public class Box<T extends Products> {
 
 	private T value;
@@ -105,7 +107,7 @@ class Products {
 	}
 	
 	@Override
-	public String toString() {	
+	public String toString() {
 		return name;
 	}
 }
