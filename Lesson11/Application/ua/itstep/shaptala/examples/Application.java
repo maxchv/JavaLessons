@@ -7,54 +7,78 @@ import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
+import java.util.Random;
 import java.util.TreeMap;
 
 public class Application {
 
-	public static long testSpeed(List<Integer> list, int n) {
-		Instant start = Instant.now();
-		for (int i = 0; i < n; i++) {
-			list.add(new Integer(i));
-		}		
-		Iterator<?> iter = list.iterator();
-		while (iter.hasNext()) {
-			iter.next();
-			iter.remove();
-		}
-		Instant end = Instant.now();
-		return Duration.between(start, end).getNano();
-	}
-
+	
 	static class BenchmarkList {
 		static int from = 1000;
 		static int to   = 100000;
 		static int step = 10;
 		List<? super Integer> list;
+		static Random rnd = new Random();
 		
 		Map<Integer, Integer> results = new TreeMap<>();
+		
+		void clear() {
+			results.clear();
+			list.clear();
+		}
 		
 		public BenchmarkList(List<? super Integer> list) {
 			this.list = list;
 		}
 		
-		void run() {
+		void runCreateRemove() {
+			clear();
 			for(int i=from; i<=to; i*=step) {
-				iter(i);
+				iterCreateRemove(i);				
 			}
 		}
 		
-		void iter(int n) {
+		void runRandomAccess() {
+			clear();
+			for(int i=from; i<=to; i*=step) {				
+				iterRandomGet(i);
+			}
+		}
+		
+		void iterRandomGet(int n) {
 			Instant start = Instant.now();
-			for (int i = 0; i < n; i++) {
-				list.add(new Integer(i));
-			}		
+			createList(n);		
+			randomAccess();
+			Instant end = Instant.now();
+			results.put(n, Duration.between(start, end).getNano());
+		}
+
+		private void randomAccess() {
+			for(int i=0; i<list.size(); i++) {
+				Object tmp = list.get(rnd.nextInt(list.size()));
+			}
+		}
+		
+		void iterCreateRemove(int n) {
+			Instant start = Instant.now();
+			createList(n);		
+			removeAllItem();
+			Instant end = Instant.now();
+			results.put(n, Duration.between(start, end).getNano());
+		}
+
+		private void removeAllItem() {
 			Iterator<?> iter = list.iterator();
 			while (iter.hasNext()) {
 				iter.next();
 				iter.remove();
 			}
-			Instant end = Instant.now();
-			results.put(n, Duration.between(start, end).getNano());
+		}
+
+		private void createList(int n) {
+			for (int i = 0; i < n; i++) {
+				list.add(new Integer(i));
+			}
 		}
 		
 		@Override
@@ -89,12 +113,20 @@ public class Application {
 		
 	public static void main(String[] args) {		
 		List<BenchmarkList> benchmarks = new ArrayList<>(); 
+		
 		benchmarks.add(new BenchmarkList(new ArrayList<>()));
 		benchmarks.add(new BenchmarkList(new LinkedList<>()));
 		
+		System.out.println("Create/Remove");
 		for(BenchmarkList b: benchmarks) {
-			b.run();
-		}
+			b.runCreateRemove();
+		}		
+		BenchmarkList.printResults(benchmarks);
+						
+		System.out.println("Random Access");
+		for(BenchmarkList b: benchmarks) {
+			b.runRandomAccess();
+		}		
 		BenchmarkList.printResults(benchmarks);
 	}
 
