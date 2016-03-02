@@ -35,8 +35,11 @@ public class App {
 	}
 	
 	public static void main(String[] args) {
-		//usingDateTime();
-		
+		//usingDateTime();		
+		usingMap();		
+	}
+
+	private static void usingMap() {
 		Map<String, Person> people = new TreeMap<>();
 		// добавление данных
 		people.put("Нафаня", new Person("Николай", LocalDate.of(1999, Month.SEPTEMBER, 1), "nikola@gmail.com"));
@@ -81,7 +84,6 @@ public class App {
 		
 		System.out.println("size:" + people.size());
 		System.out.println(people);
-		
 	}
 
 	private static void usingDateTime() {
