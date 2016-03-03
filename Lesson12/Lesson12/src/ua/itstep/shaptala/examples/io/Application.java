@@ -35,9 +35,7 @@ public class Application {
 		// Scanner/PrintStream/PrintWriter
 		Scanner scanner = new Scanner(
 				new BufferedReader(
-						new InputStreamReader(
-								new FileInputStream(INPUT_FILE), "UTF8"
-								)
+						new InputStreamReader(new FileInputStream(INPUT_FILE), "UTF8")
 						)
 				);		
 		while(scanner.hasNext()) {
