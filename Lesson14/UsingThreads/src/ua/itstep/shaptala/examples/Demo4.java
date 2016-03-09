@@ -6,7 +6,6 @@ public class Demo4 {
 		Account2 account = new Account2(0);
 		
 		new Thread(new Runnable() {
-			
 			@Override
 			public void run() {
 				for(int i=0; i<50_000_000; i++) {

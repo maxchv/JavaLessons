@@ -1,5 +1,12 @@
 package ua.itstep.shaptala.examples;
 
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+import java.io.Serializable;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
@@ -8,16 +15,40 @@ public class DemoSerialization1 {
 
 	public static void main(String[] args) {
 		
+		serializeToFile();
+		deserializeFromFile();
+	}
+
+	private static void deserializeFromFile() {
+		List<Person> people = null;
+		try(ObjectInputStream in = new ObjectInputStream(new FileInputStream("people.bin"))) {
+			people = (List<Person>)in.readObject();		
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		for(Person p: people) {
+			System.out.println(p);
+		}
+	}
+
+	private static void serializeToFile() {
+		List<Person> people = Person.createRoster();
+		try(ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream("people.bin"))) {
+			out.writeObject(people);
+		} catch (Exception e) {			
+			e.printStackTrace();
+		}
 	}
 }
 
-class Person  {
-
+class Person implements Serializable {
+	
 	public enum Sex {
 		MALE, FEMALE
 	}
 
-	String name;
+	// запрещает сериализацию
+    transient String name;
 	LocalDate birthday;
 	Sex gender;
 	String emailAddress;

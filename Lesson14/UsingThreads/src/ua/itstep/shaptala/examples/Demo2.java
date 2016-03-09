@@ -14,11 +14,11 @@ public class Demo2 {
 		
 		Thread.sleep(100L);
 		
-//		System.out.println("Interrupting threads");
+		System.out.println("Interrupting threads");
 //		worker.interrupt();
 //		sleeper.interrupt();
-//		
-//		System.out.println("Joining threads");
+		
+		System.out.println("Joining threads");
 //		worker.join();
 //		sleeper.join();
 		
@@ -31,7 +31,7 @@ public class Demo2 {
 			long sum = 0;
 			for(int i=0; i<2_000_000_000; i++) {
 				sum +=i;
-				if(i%100 == 0 && interrupted()) {
+				if(i%100 == 0 && isInterrupted()) {
 					System.out.println("Loop interrupted at i = " + i);
 					break;
 				}

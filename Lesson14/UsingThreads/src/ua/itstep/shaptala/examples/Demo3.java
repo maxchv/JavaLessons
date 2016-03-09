@@ -30,13 +30,12 @@ public class Demo3 {
 			for (int i = 0; i < 20_000; i++) {
 				account.withdraw(1);
 			}
-
 		}
 	}
 
 	public static void main(String[] args) throws Exception {
-		// concurrencyRace();
-		concurrencyRaceRunnable();
+		 concurrencyRace();
+		//concurrencyRaceRunnable();
 	}
 
 	private static void concurrencyRaceRunnable() throws InterruptedException {
@@ -115,7 +114,7 @@ class Account {
 		this.balance = balance;
 	}
 
-	public void deposit(long amount) {
+	public synchronized void deposit(long amount) {
 		checkAmountNonNegative(amount);
 
 		balance += amount;
@@ -127,7 +126,7 @@ class Account {
 		}
 	}
 
-	public void withdraw(long amount) {
+	public synchronized void withdraw(long amount) {
 		checkAmountNonNegative(amount);
 
 		if (balance < amount) {
