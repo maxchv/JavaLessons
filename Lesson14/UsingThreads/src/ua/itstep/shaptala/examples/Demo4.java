@@ -18,7 +18,7 @@ public class Demo4 {
 		
 		account.waitAndWithdraw(50_000_000);
 		
-		System.out.println("waitAntWithdraw() finished");
+		System.out.println("waitAntWithdraw() finished " + account.getBalance());
 	}
 
 }
@@ -59,7 +59,7 @@ class Account2 {
 	public synchronized void waitAndWithdraw(long amount) throws InterruptedException {
 		checkAmountNonNegative(amount);
 		while(balance < amount) {
-			wait();
+			this.wait();
 		}
 		balance -= amount;
 	}

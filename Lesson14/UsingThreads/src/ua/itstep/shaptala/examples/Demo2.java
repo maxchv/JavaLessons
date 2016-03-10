@@ -5,8 +5,10 @@ public class Demo2 {
 	public static void main(String[] args) throws Exception {
 		Thread worker = new WorkedThread();
 //		worker.setDaemon(true);
+		
 		Thread sleeper = new SleeperThread();
 //		sleeper.setDaemon(true);
+		
 		System.out.println("Starting threads");
 		
 		worker.start();
@@ -14,11 +16,11 @@ public class Demo2 {
 		
 		Thread.sleep(100L);
 		
-		System.out.println("Interrupting threads");
+//		System.out.println("Interrupting threads");
 //		worker.interrupt();
 //		sleeper.interrupt();
 		
-		System.out.println("Joining threads");
+//		System.out.println("Joining threads");
 //		worker.join();
 //		sleeper.join();
 		
@@ -36,6 +38,7 @@ public class Demo2 {
 					break;
 				}
 			}
+			System.out.println("End loop for thread : " + getName());
 		}
 	}
 	
@@ -43,10 +46,11 @@ public class Demo2 {
 		@Override
 		public void run() {
 			try {
-				Thread.sleep(60_000L);
+				Thread.sleep(1_000L);
 			} catch (InterruptedException e) {
 				System.out.println("Sleep interrupted");
 			}
+			System.out.println("End sleeper thread: " + getName());
 		}
 	}
 }

@@ -28,8 +28,6 @@ public class ExecutorServiceDemo {
 			System.out.println(name + " finished");
 			return name;
 		}
-
-		
 	}
 
 	public static void main(String[] args) throws InterruptedException, ExecutionException {

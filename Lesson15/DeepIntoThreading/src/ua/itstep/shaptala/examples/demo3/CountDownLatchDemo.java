@@ -36,11 +36,12 @@ public class CountDownLatchDemo {
 			
 			// main phase
 			Thread.sleep((long) Math.random() * 10000);
+			System.out.println("End main phase for " + getName());
 		}
 	}
 
 	public static void main(String[] args) {
-		CountDownLatch latch = new CountDownLatch(10);
+		CountDownLatch latch = new CountDownLatch(5);
 		
 		for(int i=0; i<10; i++) {
 			new DemoThread(latch).start();

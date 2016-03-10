@@ -34,8 +34,8 @@ public class Demo3 {
 	}
 
 	public static void main(String[] args) throws Exception {
-		 concurrencyRace();
-		//concurrencyRaceRunnable();
+		concurrencyRace();
+		// concurrencyRaceRunnable();
 	}
 
 	private static void concurrencyRaceRunnable() throws InterruptedException {
@@ -73,11 +73,16 @@ public class Demo3 {
 	}
 
 	private static void concurrencyRace() throws InterruptedException {
-		Account account = new Account(100_000);
+		Account account = new Account(100_000); // balance = 100_000
 		System.out.println("Begin balance " + account.getBalance());
 
-		Thread withdrawThread = new WithdrawThread(account);
-		Thread depositThread = new DepositThread(account);
+		Thread withdrawThread = new WithdrawThread(account); // balance =
+																// balance -
+																// 20_000 =
+																// 80_000
+		Thread depositThread = new DepositThread(account); // balance = balance
+															// + 20_000 =
+															// 100_000
 
 		withdrawThread.start();
 		depositThread.start();
@@ -96,7 +101,7 @@ public class Demo3 {
  *
  */
 class Account {
-	private long balance;
+	private Long balance;
 
 	public Account() {
 		this(0L);
@@ -114,10 +119,11 @@ class Account {
 		this.balance = balance;
 	}
 
-	public synchronized void deposit(long amount) {
+	public void deposit(long amount) {
 		checkAmountNonNegative(amount);
-
-		balance += amount;
+		synchronized (this) {
+			balance += amount;
+		}
 	}
 
 	private static void checkAmountNonNegative(long amount) {
@@ -126,13 +132,14 @@ class Account {
 		}
 	}
 
-	public synchronized void withdraw(long amount) {
+	public void withdraw(long amount) {
 		checkAmountNonNegative(amount);
+		synchronized (this) {
+			if (balance < amount) {
+				throw new IllegalArgumentException("not enough money");
+			}
 
-		if (balance < amount) {
-			throw new IllegalArgumentException("not enough money");
+			balance -= amount;
 		}
-
-		balance -= amount;
 	}
 }
