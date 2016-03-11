@@ -46,7 +46,13 @@ public class ExecutorServiceDemo {
 		
 		System.out.println("Submit workers using invoke All");
 		
-		List<Future<String>> futures = executor.invokeAll(Arrays.asList(new Worker("Worker 3"), new Worker("Worker 4")));
+		List<Future<String>> futures = executor.invokeAll (
+						Arrays.asList(
+								new Worker("Worker 3"),
+								new Worker("Worker 4"),
+								new Worker("Worker 5")
+								)
+						);
 	
 		System.out.println("Exited invokeAll");
 		

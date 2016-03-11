@@ -1,2 +1,5 @@
 Диаграммы: http://www.falkhausen.de/en/diagram/diagram.html
 http://www.kgeorgiy.info/courses/java-advanced/
+
+Шпаргалка Java программиста 4. Java Stream API
+https://habrahabr.ru/company/luxoft/blog/270383/
