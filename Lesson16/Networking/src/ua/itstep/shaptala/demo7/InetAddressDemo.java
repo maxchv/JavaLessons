@@ -6,9 +6,9 @@ import java.net.InetAddress;
 public class InetAddressDemo {
 
 	public static void main(String[] args) throws Exception {
-		InetAddress localhost = InetAddress.getLocalHost();		
-		intetAddressInfo(localhost);
-		InetAddress[] addrs = InetAddress.getAllByName("www.nba.com");
+//		InetAddress localhost = InetAddress.getLocalHost();		
+//		intetAddressInfo(localhost);
+		InetAddress[] addrs = InetAddress.getAllByName("google.com.ua");
 		for(InetAddress addr: addrs) {
 			intetAddressInfo(addr);
 		}

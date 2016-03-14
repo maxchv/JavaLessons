@@ -3,8 +3,7 @@ package ua.itstep.shaptala.demo1;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.io.OutputStream;
-import java.io.OutputStreamWriter;
+import java.io.PrintWriter;
 import java.io.UnsupportedEncodingException;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
@@ -16,33 +15,38 @@ public class URLDemo {
 	static URL itstep;
 	static {
 		try {
-			itstep= new URL(url);
+			itstep = new URL(url);
 		} catch (MalformedURLException e) {			
 			e.printStackTrace();
 		}	
 	}
 	public static void main(String[] args) throws Exception {
-		// getUrlInfo();
-		// readingDirectlyFromUrl();
-		//readingUsingConnection();
+		//getUrlInfo();
+		 //readingDirectlyFromUrl();
+		readingUsingConnection();
 	}
 
 	private static void readingUsingConnection() throws IOException, UnsupportedEncodingException {
 		HttpURLConnection conn = (HttpURLConnection) itstep.openConnection();
-      		
-		try (BufferedReader in = new BufferedReader(new InputStreamReader(conn.getInputStream(), "utf8"))) {
+      	
+		try (
+				BufferedReader in = new BufferedReader(new InputStreamReader(conn.getInputStream(), "utf8"));				
+			) {
 			String inputLine;
 			while ((inputLine = in.readLine()) != null) {
-				System.out.println(inputLine);
+				System.out.println(inputLine);				
 			}
 		}
 	}
 
 	private static void readingDirectlyFromUrl() throws MalformedURLException, IOException {		
-		try (BufferedReader in = new BufferedReader(new InputStreamReader(itstep.openStream()))) {
+		try (BufferedReader in = new BufferedReader(new InputStreamReader(itstep.openStream(), "utf8"));
+				PrintWriter writer = new PrintWriter("index.html");
+			) {
 			String inputLine;
 			while ((inputLine = in.readLine()) != null) {
-				System.out.println(inputLine);
+				//System.out.println(inputLine);
+				writer.println(inputLine);
 			}
 		}
 	}
