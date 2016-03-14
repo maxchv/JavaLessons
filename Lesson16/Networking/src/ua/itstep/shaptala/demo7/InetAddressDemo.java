@@ -24,6 +24,8 @@ public class InetAddressDemo {
 		System.out.println("Is Multicast? "+addr.isMulticastAddress());
 		System.out.println("Is Reachable? "+addr.isReachable(100));
 		System.out.println("Is Loopback? "+addr.isLoopbackAddress());
+		System.out.println("Is Link Local Address? "+addr.isLinkLocalAddress());
+		System.out.println("Is Site Local Address? "+addr.isSiteLocalAddress());
 	}
 
 }

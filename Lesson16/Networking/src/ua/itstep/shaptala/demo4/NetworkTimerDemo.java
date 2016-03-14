@@ -11,6 +11,7 @@ public class NetworkTimerDemo {
 
 	public static void main(String[] args) throws Exception {
 		byte[] buf;
+		System.out.println("timer is started");
 		try (DatagramSocket socket = new DatagramSocket()) {
 			while (true) {
 				buf = LocalTime.now().toString().getBytes();

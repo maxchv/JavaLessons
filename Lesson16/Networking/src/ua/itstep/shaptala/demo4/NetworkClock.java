@@ -9,7 +9,7 @@ public class NetworkClock {
 
 	public static void main(String[] args) throws SocketException, InterruptedException {
 		try (DatagramSocket socket = new DatagramSocket(NetworkTimerDemo.PORT)) {
-			DatagramPacket packet = new DatagramPacket(new byte[1024], 1024);			
+			DatagramPacket packet = new DatagramPacket(new byte[12], 12);			
 			while (true) {
 				try {
 					socket.receive(packet);
