@@ -11,11 +11,13 @@ public class NetworkTimerDemo {
 
 	public static void main(String[] args) throws Exception {
 		byte[] buf;
-		System.out.println("timer is started");
+		
+		System.out.println("Network timer is started");
 		try (DatagramSocket socket = new DatagramSocket()) {
 			while (true) {
 				buf = LocalTime.now().toString().getBytes();
-				DatagramPacket packet = new DatagramPacket(buf, buf.length, InetAddress.getLocalHost(), PORT);				
+				DatagramPacket packet = new DatagramPacket(buf, buf.length, 
+														InetAddress.getLocalHost(), PORT);				
 				socket.send(packet);
 				Thread.sleep(500);
 			}
