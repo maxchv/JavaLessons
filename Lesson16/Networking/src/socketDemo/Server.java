@@ -29,7 +29,7 @@ public class Server {
 				if(line.equals("Bye")) {
 					break;
 				}
-				System.out.println("server >>> "+line);								
+				System.out.println("client >>> "+line);								
 				out.println(line.toUpperCase());
 			}			
 			

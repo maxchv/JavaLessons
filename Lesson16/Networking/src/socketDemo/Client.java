@@ -11,7 +11,7 @@ public class Client {
 	public static void main(String[] args) {
 		BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 		try (
-				Socket client = new Socket("localhost", Server.port);
+				Socket client = new Socket("10.2.111.13", 10002);
 				BufferedReader in = new BufferedReader(new InputStreamReader(client.getInputStream()));
 				PrintWriter out = new PrintWriter(new BufferedOutputStream(client.getOutputStream()), true);
 			) {					
