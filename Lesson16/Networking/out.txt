@@ -1,0 +1,1194 @@
+<!DOCTYPE html>
+
+<html lang="ru" class="application state-empty">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="google" content="notranslate">
+        <meta name="keywords" content="перевод, переводчик, перевод онлайн, переводчик онлайн, translate, англо-русский, машинный перевод">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Перевод с английского, немецкого, французского, испанского, польского, турецкого и других языков на русский и обратно. Возможность переводить отдельные слова и фразы, а также целые тексты и веб-страницы.">
+        <link href="/opensearch.xml" rel="search" type="application/opensearchdescription+xml" title="Яндекс.Переводчик">
+        <link href="https://translate.yandex.net/main/v2.80.1458122221/i/favicon.ico" rel="icon" sizes="16x16 32x32 48x48 64x64" type="image/vnd.microsoft.icon">
+        
+        <link rel="canonical" href="https://translate.yandex.ru"/>
+        <link rel="alternate" hreflang="ru" href="https://translate.yandex.ru"/>
+        <link rel="alternate" hreflang="ru-UA" href="https://translate.yandex.ua/?ui=ru"/>
+        <link rel="alternate" hreflang="uk-RU" href="https://translate.yandex.ru/?ui=uk"/>
+        <link rel="alternate" hreflang="ru-BY" href="https://translate.yandex.by"/>
+        <link rel="alternate" hreflang="ru-KZ" href="https://translate.yandex.kz"/>
+        <link rel="alternate" hreflang="uk" href="https://translate.yandex.ua"/>
+        <link rel="alternate" hreflang="en" href="https://translate.yandex.com"/>
+        <link rel="alternate" hreflang="tr" href="https://ceviri.yandex.com.tr"/>
+        
+        <title>Яндекс.Переводчик – словарь и онлайн перевод на английский, русский, немецкий, французский, украинский и другие языки.</title>
+        <style type="text/css">
+            .spinner,
+            .message,
+            .external-panel_edit,
+            .external-panel_left {
+                visibility: hidden;
+            }
+            .state-hidden {
+                display: none;
+            }
+        </style>
+        <style type="text/css">
+            .service-description {
+                color: #4c4c4c;
+                bottom: 0;
+                padding: 11px;
+                overflow: hidden;
+                position: absolute;
+                max-height: 100%;
+                border-top: 24px solid #fff;
+                background: #f6f8f9;
+                line-height: 22px;
+                -webkit-box-sizing: border-box;
+                   -moz-box-sizing: border-box;
+                        box-sizing: border-box;
+            }
+            .service-description a {
+                color: #669;
+            }
+        </style>
+        
+        <link href="https://translate.yandex.net/main/v2.80.1458122221/css/tr_text.css" rel="stylesheet" type="text/css">
+        
+        <script id="urlTemplate" type="text/template">
+            <input type="hidden" name="ui" value="{{ui}}">
+            <input type="hidden" name="url" value="{{url}}">
+            <input type="hidden" name="lang" value="{{lang}}">
+            <span class="page-url" data-action="translatePage">{{url}}</span>
+        </script>
+        <script id="spellerTemplate" type="text/template">{{#items}}<span class="speller-chunk"{{#type}} data-type="{{type}}" data-index="{{index}}"{{/type}}>{{value}}</span>{{/items}}.</script>
+        <script id="listboxTemplate" type="text/template">
+            {{#items}}
+                <div class="listbox-option{{#multiple}} listbox-option_checkbox{{/multiple}}{{#selected}} state-selected{{/selected}}" data-value="{{value}}" unselectable="on">{{text}}{{>extras}}</div>
+            {{/items}}
+        </script>
+        <script id="listboxTemplate2" type="text/template">{{#cols}}<div class="listbox-column" unselectable="on">{{>items}}</div>{{/cols}}</script>
+        <script id="langTagsTemplate" type="text/template">{{#tags.new}}<span class="listbox-option-tag listbox-option-tag_new">new</span>{{/tags.new}}{{#tags.beta}}<span class="listbox-option-tag listbox-option-tag_beta">?</span>{{/tags.beta}}{{#tags.alpha}}<span class="listbox-option-tag listbox-option-tag_alpha">?</span>{{/tags.alpha}}</script>
+        <script id="measurerTemplate" type="text/template">{{leftText}}<span>{{text}}</span>{{rightText}}.</script>
+        <script id="externalTemplate" type="text/template">{{#items}}<a href="{{href}}" class="external-link" target="_blank" rel="nofollow">{{name}}</a>{{/items}}</script>
+        <script id="synonymsTemplate" type="text/template">
+            {{#articles}}
+                <div class="item-title" data-scroll-target="true">{{title}}</div>
+                <ul>{{#items}}
+                    <li class="synonyms-item">
+                        {{#title}}
+                            <div class="synonyms-title">
+                                {{title}}
+                                {{#partOfSpeech}}<span class="synonyms-pos">{{partOfSpeech}}</span>{{/partOfSpeech}}
+                            </div>
+                        {{/title}}
+
+                        <ul class="synonyms-meanings">
+                            {{#lines}}
+                                <li class="synonyms-line">{{#meanings}}<span class="synonyms-value" data-value="{{value}}">{{value}}</span>{{^isLast}} &middot; {{/isLast}}{{/meanings}}</li>
+                            {{/lines}}
+                        </ul>
+                    </li>
+                {{/items}}</ul>
+            {{/articles}}
+        </script>
+        <script id="predictorTemplate" type="text/template"><div class="predictor-value" data-value="{{value}}" unselectable="on">{{value}}</div></script>
+        <script id="phraseBookTemplate" type="text/template">
+            {{^items}}
+                <div class="fav-placeholder{{#empty}} fav-placeholder_empty{{/empty}}" data-text="Нет переводов в избранном" data-text2="Ничего не найдено"></div>
+            {{/items}}
+            {{#items}}
+                <div class="fav-item">
+                    <div class="button button_icon button_icon_favourites state-favourite" data-action="deleteFavItem" data-index="{{id}}"></div>
+                    <div class="fav-body" data-value="{{id}}">
+                        <div class="fav-lang">{{srcLang}} &ndash; {{dstLang}}</div>
+                        <div class="fav-text state-ellipsis" dir="{{srcDir}}" lang="{{srcLang}}">{{text}}</div>
+                        <div class="fav-translation state-ellipsis" dir="{{dstDir}}" lang="{{dstLang}}">{{translation}}</div>
+                    </div>
+                </div>
+            {{/items}}
+        </script>
+        <script id="translatorTemplate" type="text/template">{{#chunks}}{{#value}}<span class="translation-chunk"{{#align}} data-align="{{align}}"{{/align}}>{{value}}</span>{{/value}}{{#needLineBreak}}<br>{{/needLineBreak}}{{/chunks}}</script>
+        <script id="dictionaryTemplate" type="text/template">
+            {{#items}}
+                <li class="dictionary-item">
+                    {{#title}}
+                        <div class="dictionary-title">
+                            {{title}}
+                            {{#transcription}}<span class="dictionary-transcription">[{{transcription}}]</span>{{/transcription}}
+                            {{#partOfSpeech}}<span class="dictionary-pos">{{partOfSpeech}}</span>{{/partOfSpeech}}
+                            {{#getMarks}}<span class="dictionary-marks">{{getMarks}}</span>{{/getMarks}}
+                        </div>
+                    {{/title}}
+
+                    <ol class="dictionary-meanings{{#isOne}} dictionary-meanings-one{{/isOne}}{{#isLong}} dictionary-meanings-long{{/isLong}}">
+                        {{#meanings}}
+                            <li class="dictionary-meanings-item">
+                                <div class="dictionary-meanings-value">{{#meaningVals}}<span class="dictionary-meaning" data-type="translation" data-value="{{{value}}}" data-title="{{{title}}}" data-part-of-speech="{{{partOfSpeech}}" data-group-index="{{{groupIndex}}">{{value}}</span>{{#getMarks}} <span class="dictionary-marks">{{getMarks}}</span>{{/getMarks}}{{^isLast}}, {{/isLast}}{{/meaningVals}}</div>
+
+                                {{#hasTranslations}}<div class="dictionary-meanings-trs">({{#meaningTrs}}<span data-type="meaning" data-title="{{{title}}}" data-part-of-speech="{{{partOfSpeech}}" data-group-index="{{{groupIndex}}">{{value}}</span>{{^isLast}}, {{/isLast}}{{/meaningTrs}})</div>{{/hasTranslations}}
+
+                                {{#hasExamples}}
+                                    <ul class="dictionary-examples">
+                                        {{#examples}}
+                                            <li><span data-type="example" data-title="{{{title}}}" data-part-of-speech="{{{partOfSpeech}}" data-group-index="{{{groupIndex}}">{{exampleVal}}{{#exampleTrs}} &ndash; {{exampleTrs}}{{/exampleTrs}}</span></li>
+                                        {{/examples}}
+                                    </ul>
+                                {{/hasExamples}}
+                            </li>
+                        {{/meanings}}
+                    </ol>
+                </li>
+            {{/items}}
+            {{#hasToggler}}
+                <li class="dictionary-item dictionary-item_toggler{{#full}} state-toggled{{/full}}"><span data-action="toggleArticle">{{#more}}Показать ещё{{/more}}{{#full}}Свернуть{{/full}}</span></li>
+            {{/hasToggler}}
+        </script>
+        
+    </head>
+    <body data-text="test" data-lang="en-ru">
+        <div id="header" class="header">
+            <div class="service"><a id="logo" href="https://www.yandex.ru" class="logo" target="_top"></a><a href="/" class="name" target="_top">Переводчик</a><div class="tabs"><span class="button button_tab state-selected">Текст</span><a href="/translate" class="button button_tab" data-tracker-goal="TAB_NAVIGATE_URL">Сайт</a></div></div>
+            <div class="menu"><div class="inline-block"><span id="optionsButton" role="button" class="button button_icon button_icon_settings" tabindex="-1" aria-label="Настройки" data-tooltip="Настройки" data-tracker-goal="OPTIONS_OPEN"></span><div id="optionsListbox" class="listbox options state-hidden state-fadeaway state-unselectable"></div></div><a href="https://passport.yandex.ru/passport?mode=auth&amp;retpath=https%3A%2F%2Ftranslate.yandex.ru" class="button button_enter">Войти</a></div>
+            <div id="tableau" class="tableau state-hidden state-unselectable"><iframe id="tableauFrame" class="tableau-frame" frameborder="0" allowtransparency="true"></iframe></div>
+        </div>
+        <div class="main">
+            <div class="spacer" data-resizer-spacer="true"></div>
+            
+            <div class="container container_main" data-resizer-target="true">
+                <div class="item item_left">
+                    <div class="panel"><span role="button" class="button button_icon button_icon_clear" aria-label="Очистить" data-action="clearText" data-tooltip="Очистить" data-tooltip-position="top" data-tracker-goal="TEXT_DELETE"></span><div class="inline-block"><span id="textNativeSpeaker" role="button" class="button button_icon button_icon_speaker state-hidden" aria-label="Озвучить" data-tooltip="Озвучить" data-tooltip-position="top"></span><span id="textSpeaker" role="button" class="button button_icon button_icon_speaker state-hidden" aria-label="Озвучить" data-tooltip="Озвучить" data-tooltip-position="top"></span></div><span id="microphone" role="button" class="button button_icon button_icon_microphone state-hidden" aria-label="Голосовой ввод" data-tooltip="Голосовой ввод" data-tooltip-position="top"></span><span id="keyboardButton" role="button" class="button button_icon button_icon_keyboard state-hidden" aria-label="Экранная клавиатура" data-tooltip="Экранная клавиатура" data-tooltip-position="top"></span><div class="language language_source"><span id="srcLangButton" class="button button_select" tabindex="-1" data-tooltip="Язык исходного текста" data-tooltip-position="top">&mdash;</span><div id="srcLangListbox" role="listbox" class="listbox state-hidden state-fadeaway state-unselectable"><div class="listbox-column listbox-column_extra"><div class="listbox-option listbox-option_checkbox" data-action="toggleAuto">Автоопределение</div><div id="srcLangHistory" class="state-hidden"><div class="listbox-option listbox-option_label">Недавние</div><div id="srcLangHistoryContent"></div></div></div><div id="srcLangListboxContent" class="listbox-column listbox-column_main"></div></div></div></div>
+                    <div id="textbox" class="textwrapper state-empty">
+                        <canvas id="volume" class="volume state-hidden state-fadeaway" width="120" height="120"></canvas>
+                        <div class="textbox">
+                            <span class="placeholder state-ellipsis">Введите текст или адрес сайта</span>
+                            <div id="speller" class="textinput textlayer textlayer_measurer textlayer_measurer_speller"></div>
+                            <div id="interim" class="textinput textlayer textlayer_measurer textlayer_measurer_interim"></div>
+                            <div id="measurer" class="textinput textlayer textlayer_measurer"></div>
+                            <div id="alignment" class="textinput textlayer textlayer_measurer textlayer_measurer_alignment"></div>
+                            <div id="textLayer" class="textinput textlayer textlayer_measurer textlayer_measurer_layer"></div>
+                            <textarea id="textarea" class="textinput textlayer" tabindex="0" autocorrect="off" autocomplete="off" autocapitalize="off" spellcheck="false"></textarea>
+                            <div id="predictor" class="predictor state-hidden state-unselectable" tabindex="-1" unselectable="on"></div>
+                            <div id="spellerListbox" class="listbox listbox_fixed state-hidden state-fadeaway state-unselectable"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item item_right">
+                    <div class="panel"><div class="language language_target"><span id="dstLangButton" class="button button_select" tabindex="-1" data-tooltip="Язык перевода" data-tooltip-position="top">&mdash;</span><div id="dstLangListbox" role="listbox" class="listbox state-hidden state-fadeaway state-unselectable"><div id="dstLangHistory" class="listbox-column listbox-column_extra state-hidden"><div class="listbox-option listbox-option_label">Недавние</div><div id="dstLangHistoryContent"></div></div><div id="dstLangListboxContent" class="listbox-column listbox-column_main"></div></div></div><span id="favButton" role="button" class="button button_icon button_icon_favourites state-hidden" aria-label="Добавить в избранное" data-tooltip="Добавить в избранное" data-tooltip-position="top"></span><div class="inline-block"><span id="translatorNativeSpeaker" role="button" class="button button_icon button_icon_speaker state-hidden" aria-label="Озвучить" data-tooltip="Озвучить" data-tooltip-position="top"></span><span id="translatorSpeaker" role="button" class="button button_icon button_icon_speaker state-hidden" aria-label="Озвучить" data-tooltip="Озвучить" data-tooltip-position="top"></span></div><span id="copyButton" role="button" class="button button_icon button_icon_copy state-hidden" aria-label="Выделить все" data-tooltip="Выделить все" data-tooltip-position="top"></span><span id="searchButton" role="button" class="button button_icon button_icon_search state-hidden" data-tracker-goal="TEXT_SEARCH" aria-label="Поиск" data-tooltip="Поиск" data-tooltip-position="top"></span><div class="inline-block"><span id="shareButton" role="button" class="button button_icon button_icon_share state-hidden" tabindex="-1" aria-label="Поделиться" data-tooltip="Поделиться" data-tooltip-position="top" data-tracker-goal="SHARING_OPEN"></span>
+                        <div id="share" role="listbox" class="share listbox state-hidden state-fadeaway state-unselectable">
+                            <div class="listbox-option listbox-option_label">Поделиться переводом</div>
+                            <div class="listbox-column">
+                                <div id="shareContent"></div>
+                                <div class="listbox-option" data-action="mailTo" unselectable="on"></div>
+                            </div>
+                            <div id="shareInput" class="listbox-option listbox-option_fakeinput state-selectable" data-tracker-goal="SHARING_INPUT_CLICK"></div>
+                        </div></div><span id="editorButton" role="button" class="button button_icon button_icon_pencil state-hidden" aria-label="Предложить перевод" data-tooltip="Предложить перевод" data-tooltip-position="left"></span></div>
+                    <div id="textbox2" class="textwrapper state-hidden">
+                        <div class="textbox">
+                            <div id="translationLayer" class="textinput textlayer textlayer_measurer textlayer_measurer_layer"></div>
+                            <div id="translation" class="textinput textlayer translation state-fadeaway" tabindex="1"></div>
+                            <textarea id="textarea2" class="editor textinput textlayer state-empty" tabindex="-1" autocorrect="off" autocomplete="off" autocapitalize="off" spellcheck="false"></textarea>
+                            <div class="spinner state-fadeaway"></div>
+                            <div class="message message_edit">
+                                <div class="message-content message-content_main"><span class="message-text" data-inner-text="Предложите свой вариант перевода"></span><span class="button button_active" data-action="sendEditing" data-inner-text="Отправить"></span><span class="button" data-action="cancelEditing" data-inner-text="Отменить"></span></div>
+                                <div class="message-text message-content message-content_extra" data-inner-text="Спасибо!"></div>
+                            </div>
+                            <div class="message message_warning"><span class="message-text" data-inner-text="Перевод выполнить не удалось"></span><span class="button button_active" data-action="retry" data-inner-text="Повторить попытку"></span></div>
+                            <form id="urlForm" class="url-form textinput textlayer state-hidden state-fadeaway" method="post" action="/translate"></form>
+                        </div>
+                    </div>
+                </div>
+                <div role="button" class="button button_swap" data-tooltip="Переключить направление" data-tooltip-position="top" data-action="swapDirection" data-tracker-goal="LANGSELECT_FLIP"></div>
+                <div id="resizer" class="button button_resizer"></div>
+            </div>
+            <div class="container container_rubber">
+                <div class="item item_left">
+                    <div class="external-panel external-panel_left state-fadeaway">Текст не может быть длиннее 10&#0160;000 символов</div>
+                    <div id="synonyms" class="synonyms state-hidden state-fadeaway">
+                        <div id="synonymsTitle" class="item-title"></div>
+                        <div id="synonymsContent" class="synonyms-list"></div>
+                    </div>
+                </div>
+                <div class="item item_right">
+                    <div class="external-panel external-panel_edit state-ellipsis state-fadeaway">Ваши исправления помогают повысить качество машинного перевода</div>
+                    <div id="external" class="external-panel external-panel_right state-hidden state-fadeaway">Перевести в<span id="externalContent"></span></div>
+                    <div id="dictionary" class="dictionary state-hidden state-fadeaway" data-tooltip-nohide="true">
+                        <div class="item-title">Словарь<span class="button state-fadeaway" data-action="toggleComplaintMode">Сообщить об ошибке</span></div>
+                        <ul id="dictionaryContent" class="dictionary-list"></ul>
+                    </div>
+                </div>
+                
+                    
+                    <div id="serviceDescription" class="service-description state-fadeaway">
+                        <strong>Яндекс.Переводчик</strong>&nbsp;— синхронный перевод для 67 языков, подсказки при наборе, словарь с транскрипцией, произношением и примерами употребления слов, а также многое другое.
+                        Самые популярные направления перевода:&nbsp;<a href="/translator/English-Russian">с английского&nbsp;на русский</a> и <a href="/translator/Russian-English">с русского&nbsp;на английский</a>, <a href="/translator/German-Russian">с немецкого&nbsp;на русский</a> и <a href="/translator/Russian-German">с русского&nbsp;на немецкий</a>, <a href="/translator/French-Russian">с французского&nbsp;на русский</a> и <a href="/translator/Russian-French">с русского&nbsp;на французский</a>, <a href="/translator/Chinese-Russian">с китайского&nbsp;на русский</a> и <a href="/translator/Russian-Chinese">с русского&nbsp;на китайский</a>, <a href="/translator/Spanish-Russian">с испанского&nbsp;на русский</a> и <a href="/translator/Russian-Spanish">с русского&nbsp;на испанский</a>, <a href="/translator/Ukrainian-Russian">с украинского&nbsp;на русский</a> и <a href="/translator/Russian-Ukrainian">с русского&nbsp;на украинский</a>, <a href="/translator/Turkish-Russian">с турецкого&nbsp;на русский</a> и <a href="/translator/Russian-Turkish">с русского&nbsp;на турецкий</a>, <a href="/translator/Italian-Russian">с итальянского&nbsp;на русский</a> и <a href="/translator/Russian-Italian">с русского&nbsp;на итальянский</a>, <a href="/translator/Tatar-Russian">с татарского&nbsp;на русский</a> и <a href="/translator/Russian-Tatar">с русского&nbsp;на татарский</a>, <a href="/translator/Kazakh-Russian">с казахского&nbsp;на русский</a> и <a href="/translator/Russian-Kazakh">с русского&nbsp;на казахский</a>.
+                    </div>
+                    
+                
+            </div>
+            <div id="favWrapper" class="overlay favourites state-hidden state-hidden2 state-fadeaway state-unselectable" data-action="toggleFav">
+                <div class="overlay-content" data-action="preventToggleFav">
+                    <div id="favFilter" class="fav-item fav-item_input state-empty">
+                        <span class="button button_icon button_icon_search"></span>
+                        <input id="favFilterInput" class="textinput" spellcheck="false" autocapitalize="off" autocorrect="off" autocomplete="off" placeholder="Найти в избранном" type="text">
+                        <span class="button button_icon button_icon_clear2" data-action="clearFavInput"></span>
+                    </div>
+                    <div id="favContent" class="fav-list"></div>
+                    <div class="fav-item fav-item_bottom"><span role="button" class="button" data-action="clearFav" data-confirm="Очистить избранное?">Очистить избранное</span></div>
+                </div>
+            </div>
+            <div class="footer-line footer-line_promo">
+                <i title="Скрыть" class="close" data-action="closePromoFooter" data-tracker-goal="FOOTER_PROMO_CLOSE"></i>
+                <div class="sms-image-wrapper">
+                    <div class="sms-image"></div>
+                </div>
+                
+                <div id="smsBlock" class="sms-block state-disabled">
+                    <div class="sms-block-header">Установите приложение на смартфон и работайте офлайн</div>
+                    <div class="sms-form state-unselectable">
+                        <div id="smsPhone" class="sms-phone_input state-empty">
+                            <span class="sms-phone-plus">+</span>
+                            <input id="smsPhoneInput" class="textinput" type="text" spellcheck="false" autocapitalize="off" autocorrect="off" autocomplete="off" data-tooltip-position="top" placeholder="7 9xx xxxxxxx" maxlength="13">
+                            <span class="button button_icon button_icon_clear2" title="Очистить" data-action="clearSmsPhoneInput"></span>
+                            <div class="tooltip state-unselectable"
+                                 data-position="top"
+                                 data-text-alert="Введите номер телефона, и мы пришлём вам ссылку на Переводчик."
+                                 data-text-error-param="Не удалось отправить сообщение. Проверьте указанный номер."
+                                 data-text-error-connection="Не удалось отправить сообщение. Пожалуйста, повторите позже."></div>
+                        </div><div class="sms-send-button" data-action="sendSms"><span class="sms-send-button-text">Установить Переводчик</span></div>
+                    </div>
+                    <div class="sms-success state-unselectable">
+                        <span class="sms-success-text">Сообщение отправлено</span>
+                        <div class="sms-success-bottom">Если вам не пришло смс, <span class="sms-success-bottom-link" data-action="smsTryAgain">попробуйте ещё раз.</span></div>
+                    </div>
+                </div>
+                
+                
+                <ul class="footer-social-icons-list">
+                    <li class="footer-social-icon-item">
+                        <a class="footer-social-icon-link footer-social-icon-link_vk" href="https://vk.com/yandex_translate" title="Читайте нас во ВКонтакте" target="_blank" data-tracker-goal="FOOTER_SOCIAL_NAVIGATE_VK" rel="nofollow"></a>
+                    </li>
+                    <li class="footer-social-icon-item">
+                        <a class="footer-social-icon-link footer-social-icon-link_fb" href="https://www.facebook.com/YandexTranslateRu" title="Читайте нас в Facebook" target="_blank" data-tracker-goal="FOOTER_SOCIAL_NAVIGATE_FB" rel="nofollow"></a>
+                    </li>
+                    <li class="footer-social-icon-item">
+                        <a class="footer-social-icon-link footer-social-icon-link_tw" href="https://twitter.com/TranslateYandex" title="Читайте нас в Twitter" target="_blank" data-tracker-goal="FOOTER_SOCIAL_NAVIGATE_TW" rel="nofollow"></a>
+                    </li>
+                </ul>
+                
+                
+                <a class="footer-promo-browser" href="//browser.yandex.ru/new/desktop/main/?from=link_translate___&amp;banerid=0488000000" target="_blank" data-tracker-goal="FOOTER_LINK_NAVIGATE_BROWSER">Переводите в Яндекс.Браузере</a>
+                
+            </div>
+            <div id="keyboardContainer" class="keyboard-container state-hidden state-fadeaway state-unselectable">
+                <div id="keyboard" class="keyboard">
+                    <div class="keyboard-row">
+                        <div role="button" class="keyboard-key" data-keycode="192"></div>
+                        <div role="button" class="keyboard-key" data-keycode="49"></div>
+                        <div role="button" class="keyboard-key" data-keycode="50"></div>
+                        <div role="button" class="keyboard-key" data-keycode="51"></div>
+                        <div role="button" class="keyboard-key" data-keycode="52"></div>
+                        <div role="button" class="keyboard-key" data-keycode="53"></div>
+                        <div role="button" class="keyboard-key" data-keycode="54"></div>
+                        <div role="button" class="keyboard-key" data-keycode="55"></div>
+                        <div role="button" class="keyboard-key" data-keycode="56"></div>
+                        <div role="button" class="keyboard-key" data-keycode="57"></div>
+                        <div role="button" class="keyboard-key" data-keycode="48"></div>
+                        <div role="button" class="keyboard-key" data-keycode="189"></div>
+                        <div role="button" class="keyboard-key" data-keycode="187"></div>
+                        <div role="button" class="keyboard-key" data-keycode="8" data-specialkey="true"></div>
+                    </div>
+                    <div class="keyboard-row">
+                        <div role="button" class="keyboard-key" data-keycode="9" data-specialkey="true"></div>
+                        <div role="button" class="keyboard-key" data-keycode="81"></div>
+                        <div role="button" class="keyboard-key" data-keycode="87"></div>
+                        <div role="button" class="keyboard-key" data-keycode="69"></div>
+                        <div role="button" class="keyboard-key" data-keycode="82"></div>
+                        <div role="button" class="keyboard-key" data-keycode="84"></div>
+                        <div role="button" class="keyboard-key" data-keycode="89"></div>
+                        <div role="button" class="keyboard-key" data-keycode="85"></div>
+                        <div role="button" class="keyboard-key" data-keycode="73"></div>
+                        <div role="button" class="keyboard-key" data-keycode="79"></div>
+                        <div role="button" class="keyboard-key" data-keycode="80"></div>
+                        <div role="button" class="keyboard-key" data-keycode="219"></div>
+                        <div role="button" class="keyboard-key" data-keycode="221"></div>
+                        <div role="button" class="keyboard-key" data-keycode="220"></div>
+                    </div>
+                    <div class="keyboard-row">
+                        <div role="button" class="keyboard-key" data-keycode="20" data-specialkey="true"></div>
+                        <div role="button" class="keyboard-key" data-keycode="65"></div>
+                        <div role="button" class="keyboard-key" data-keycode="83"></div>
+                        <div role="button" class="keyboard-key" data-keycode="68"></div>
+                        <div role="button" class="keyboard-key" data-keycode="70"></div>
+                        <div role="button" class="keyboard-key" data-keycode="71"></div>
+                        <div role="button" class="keyboard-key" data-keycode="72"></div>
+                        <div role="button" class="keyboard-key" data-keycode="74"></div>
+                        <div role="button" class="keyboard-key" data-keycode="75"></div>
+                        <div role="button" class="keyboard-key" data-keycode="76"></div>
+                        <div role="button" class="keyboard-key" data-keycode="186"></div>
+                        <div role="button" class="keyboard-key" data-keycode="222"></div>
+                        <div role="button" class="keyboard-key" data-keycode="13" data-specialkey="true"></div>
+                    </div>
+                    <div class="keyboard-row">
+                        <div role="button" class="keyboard-key" data-keycode="16" data-specialkey="true"></div>
+                        <div role="button" class="keyboard-key" data-keycode="226"></div>
+                        <div role="button" class="keyboard-key" data-keycode="90"></div>
+                        <div role="button" class="keyboard-key" data-keycode="88"></div>
+                        <div role="button" class="keyboard-key" data-keycode="67"></div>
+                        <div role="button" class="keyboard-key" data-keycode="86"></div>
+                        <div role="button" class="keyboard-key" data-keycode="66"></div>
+                        <div role="button" class="keyboard-key" data-keycode="78"></div>
+                        <div role="button" class="keyboard-key" data-keycode="77"></div>
+                        <div role="button" class="keyboard-key" data-keycode="188"></div>
+                        <div role="button" class="keyboard-key" data-keycode="190"></div>
+                        <div role="button" class="keyboard-key" data-keycode="191"></div>
+                        <div role="button" class="keyboard-key" data-keycode="16" data-specialkey="true"></div>
+                    </div>
+                    <div class="keyboard-row">
+                        <div role="button" class="keyboard-key" data-keycode="18" data-specialkey="true"></div>
+                        <div id="keyboardLang" role="button" class="keyboard-key" data-keycode="32" data-specialkey="true"></div>
+                        <div role="button" class="keyboard-key" data-keycode="18" data-specialkey="true"></div>
+                    </div>
+                </div>
+                <div class="close" data-action="closeKeyboard" data-tracker-goal="KEYBOARD_CLOSE"></div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="footer-line footer-line_bottom">
+                <ul class="footer-links inline-block">
+                    
+                    <li class="lang-switcher">
+                        <div id="langSwitcherButton" class="footer-button" tabindex="-1">ru</div>
+                        <div id="langSwitcherListbox" role="listbox" class="listbox state-hidden state-fadeaway state-unselectable">
+                            
+                            <a class="listbox-option state-active" href="//tune.yandex.ru/api/lang/v1.1/save.xml?intl=ru&amp;retpath=https%3A%2F%2Ftranslate.yandex.ru%2F&amp;sk=y15214380995cdb609bea13dec4b543ca">ru</a><a class="listbox-option" href="//tune.yandex.ru/api/lang/v1.1/save.xml?intl=uk&amp;retpath=https%3A%2F%2Ftranslate.yandex.ru%2F&amp;sk=y15214380995cdb609bea13dec4b543ca">ua</a>
+                            
+                        </div>
+                    </li>
+                    
+                    <li><a href="https://tune.yandex.ru/api/my/v1.1/my.xml?param=0&amp;block=44&amp;retpath=https%3A%2F%2Ftranslate.yandex.ru/m/translate&amp;sk=y15214380995cdb609bea13dec4b543ca" class="footer-link" data-tracker-goal="FOOTER_LINK_NAVIGATE_MOBILE">Мобильная версия</a></li><li><a href="https://translate-blog.ya.ru/" class="footer-link" data-tracker-goal="FOOTER_LINK_NAVIGATE_BLOG">Новости сервиса</a></li><li><a href="/developers" class="footer-link" data-tracker-goal="FOOTER_LINK_NAVIGATE_DEV">Разработчикам</a></li><li><a href="//legal.yandex.ru/translate_termsofuse/" class="footer-link" data-tracker-goal="FOOTER_LINK_NAVIGATE_TERMS">Пользовательское соглашение</a></li><li><a href="/about" class="footer-link" data-tracker-goal="FOOTER_LINK_NAVIGATE_HELP">О сервисе</a></li><li><a href="//yandex.ru/support/translate/troubleshooting.xml" class="footer-link" data-tracker-goal="FOOTER_LINK_NAVIGATE_FEEDBACK" target="_blank">Обратная связь</a></li>
+                </ul>
+                <span class="footer-copyright inline-block">&copy;&nbsp;2011-2016 «<a href="https://www.yandex.ru" class="footer-link" data-tracker-goal="FOOTER_LINK_NAVIGATE_YANDEX">Яндекс</a>»</span>
+            </div>
+        </div>
+        <div id="tooltip" class="tooltip state-hidden state-fadeaway state-unselectable"></div>
+        <div id="dictionaryPopup" class="complaint-popup listbox listbox_fixed state-hidden state-fadeaway state-unselectable">
+            <i class="close" data-action="cancelComplaintMode"></i>
+            <div class="listbox-option listbox-option_label">Сообщить об ошибке</div>
+            <div id="dictionaryPopupComment" class="listbox-column state-empty">
+                <span class="placeholder state-ellipsis">Комментарий (по желанию)</span>
+                <textarea id="dictionaryPopupInput" class="textinput textlayer" maxlength="200" autocorrect="off" autocomplete="off" autocapitalize="off" spellcheck="false"></textarea>
+            </div>
+            <div class="listbox-option" data-action="sendComplaint">Сообщить</div>
+        </div>
+        <div class="overlay expired state-fadeaway state-unselectable">
+            <div class="overlay-content">
+                <div class="expired-header">Закончилось время сессии</div>
+                <div class="expired-text">Обновите, пожалуйста, страницу. Набранный текст и перевод не потеряются.</div>
+                <div class="button" data-action="expiredRefresh" data-tracker-goal="REFRESH_ALERT_CLICK">Обновить страницу</div>
+            </div>
+        </div>
+        <div style="top: 0; left: 0; position: absolute;">
+            <i style="background: url(//www.tns-counter.ru/V13a****yandex_ru/ru/CP1251/tmsec=yandex_translate/1458154395)"></i>
+            <img alt="" src="//yandexgaua.hit.gemius.pl/redot.gif?id=bQqVVk9xiTDOBSpShNaELvVnHZHdlqLvRK2d2bfV4RL.T7">
+            
+        </div>
+        <script src="https://translate.yandex.net/main/v2.80.1458122221/js/main.js"></script>
+        <script src="https://translate.yandex.net/main/v2.80.1458122221/js/webspeechkit-settings.js"></script>
+        <script src="https://translate.yandex.net/main/v2.80.1458122221/js/webspeechkit.js"></script>
+        <script src="https://translate.yandex.net/main/v2.80.1458122221/js/keyboard.js"></script>
+        <script src="https://translate.yandex.net/main/v2.80.1458122221/js/tr_text.js"></script>
+        <script>
+            (function (win, doc, config) {
+                'use strict';
+
+                var application = new TranslateApplication({
+                        view: new MTR.TouchView({
+                            element: doc.documentElement,
+                            ignoreSelection: true
+                        }),
+                        model: new MVPanda.Model({
+                            text: '',
+                            trText: '',
+                            selText: '',
+                            srcLang: '',
+                            dstLang: '',
+                            tooltip: '',
+                            timestamp: win.Date.now(),
+                            textScrollY: 0,
+                            translation: '',
+                            userTranslation: '',
+                            translationScrollY: 0
+                        })
+                    }),
+                    sendClientGoal = win.sendClientGoal = function (data) {
+                        var img = new Image(),
+                            url = 'https://translate.yandex.net/clientstat?';
+
+                        data = data || {};
+
+                        img.src = url + util.toQueryString(data);
+                    },
+                    sendMetrikaGoal = win.sendMetrikaGoal = function (goal, data) {
+                        try {
+                            win['yaCounter12991294'].reachGoal(goal, data);
+                            win['yaCounter28584306'].reachGoal(goal, data);
+                        } catch (error) {}
+                    },
+                    tempDictionaryData = {},
+                    tempSynonymsData = {};
+
+                win.config = config;
+
+                (function (a, b, c, d) {
+                    var e = c(a),
+                        f = c.apply(d, b);
+                    config[f] = config[f].split(e).map(function (a) {
+                        return a.split('').reverse().join('');
+                    }).join(e);
+                })(46, [83, 73, 68], win.String.fromCharCode);
+
+                config.ELEMENTS = {
+                    url: doc.getElementById('urlForm'),
+                    logo: doc.getElementById('logo'),
+                    share: doc.getElementById('share'),
+                    shareInput: doc.getElementById('shareInput'),
+                    shareButton: doc.getElementById('shareButton'),
+                    shareContent: doc.getElementById('shareContent'),
+                    header: doc.getElementById('header'),
+                    volume: doc.getElementById('volume'),
+                    resizer: doc.getElementById('resizer'),
+                    tableau: doc.getElementById('tableau'),
+                    tableauFrame: doc.getElementById('tableauFrame'),
+                    interim: doc.getElementById('interim'),
+                    speller: doc.getElementById('speller'),
+                    tooltip: doc.getElementById('tooltip'),
+                    textbox: doc.getElementById('textbox'),
+                    textbox2: doc.getElementById('textbox2'),
+                    smsBlock: doc.getElementById('smsBlock'),
+                    smsPhone: doc.getElementById('smsPhone'),
+                    smsPhoneInput: doc.getElementById('smsPhoneInput'),
+                    external: doc.getElementById('external'),
+                    externalContent: doc.getElementById('externalContent'),
+                    measurer: doc.getElementById('measurer'),
+                    synonyms: doc.getElementById('synonyms'),
+                    synonymsTitle: doc.getElementById('synonymsTitle'),
+                    synonymsContent: doc.getElementById('synonymsContent'),
+                    keyboard: doc.getElementById('keyboard'),
+                    keyboardLang: doc.getElementById('keyboardLang'),
+                    keyboardButton: doc.getElementById('keyboardButton'),
+                    keyboardContainer: doc.getElementById('keyboardContainer'),
+                    textarea: doc.getElementById('textarea'),
+                    favInput: doc.getElementById('favFilterInput'),
+                    favButton: doc.getElementById('favButton'),
+                    favFilter: doc.getElementById('favFilter'),
+                    favContent: doc.getElementById('favContent'),
+                    favWrapper: doc.getElementById('favWrapper'),
+                    alignment: doc.getElementById('alignment'),
+                    predictor: doc.getElementById('predictor'),
+                    textarea2: doc.getElementById('textarea2'),
+                    textLayer: doc.getElementById('textLayer'),
+                    dictionary: doc.getElementById('dictionary'),
+                    dictionaryContent: doc.getElementById('dictionaryContent'),
+                    dictionaryPopup: doc.getElementById('dictionaryPopup'),
+                    dictionaryPopupInput: doc.getElementById('dictionaryPopupInput'),
+                    dictionaryPopupComment: doc.getElementById('dictionaryPopupComment'),
+                    microphone: doc.getElementById('microphone'),
+                    copyButton: doc.getElementById('copyButton'),
+                    userButton: doc.getElementById('userButton'),
+                    userListbox: doc.getElementById('userListbox'),
+                    translation: doc.getElementById('translation'),
+                    textSpeaker: doc.getElementById('textSpeaker'),
+                    textNativeSpeaker: doc.getElementById('textNativeSpeaker'),
+                    translatorSpeaker: doc.getElementById('translatorSpeaker'),
+                    translatorNativeSpeaker: doc.getElementById('translatorNativeSpeaker'),
+                    editorButton: doc.getElementById('editorButton'),
+                    searchButton: doc.getElementById('searchButton'),
+                    srcLangButton: doc.getElementById('srcLangButton'),
+                    dstLangButton: doc.getElementById('dstLangButton'),
+                    optionsButton: doc.getElementById('optionsButton'),
+                    optionsListbox: doc.getElementById('optionsListbox'),
+                    srcLangHistory: doc.getElementById('srcLangHistory'),
+                    srcLangHistoryContent: doc.getElementById('srcLangHistoryContent'),
+                    dstLangHistory: doc.getElementById('dstLangHistory'),
+                    dstLangHistoryContent: doc.getElementById('dstLangHistoryContent'),
+                    srcLangListbox: doc.getElementById('srcLangListbox'),
+                    srcLangListboxContent: doc.getElementById('srcLangListboxContent'),
+                    dstLangListbox: doc.getElementById('dstLangListbox'),
+                    dstLangListboxContent: doc.getElementById('dstLangListboxContent'),
+                    spellerListbox: doc.getElementById('spellerListbox'),
+                    translationLayer: doc.getElementById('translationLayer'),
+                    serviceDescription: doc.getElementById('serviceDescription'),
+                    langSwitcherButton: doc.getElementById('langSwitcherButton'),
+                    langSwitcherListbox: doc.getElementById('langSwitcherListbox')
+                };
+
+                config.TEMPLATES = {
+                    url: doc.getElementById('urlTemplate').innerHTML,
+                    speller: doc.getElementById('spellerTemplate').innerHTML,
+                    listbox: doc.getElementById('listboxTemplate').innerHTML,
+                    langTags: doc.getElementById('langTagsTemplate').innerHTML,
+                    listbox2: doc.getElementById('listboxTemplate2').innerHTML,
+                    synonyms: doc.getElementById('synonymsTemplate').innerHTML,
+                    measurer: doc.getElementById('measurerTemplate').innerHTML,
+                    external: doc.getElementById('externalTemplate').innerHTML,
+                    predictor: doc.getElementById('predictorTemplate').innerHTML,
+                    favourites: doc.getElementById('phraseBookTemplate').innerHTML,
+                    dictionary: doc.getElementById('dictionaryTemplate').innerHTML,
+                    translator: doc.getElementById('translatorTemplate').innerHTML
+                };
+
+                config.DEFAULT_TEXT = doc.body.getAttribute('data-text');
+                config.DEFAULT_LANG = doc.body.getAttribute('data-lang');
+
+                
+
+                if (
+                    MTR.SpeakerPresenter.codecs['mp3'] &&
+                    win.navigator.userAgent.indexOf('OPR/') < 0
+                ) {
+                    config.TTS_FORMAT = 'mp3';
+                    config.TTS_QUALITY = 'hi';
+                } else if (MTR.SpeakerPresenter.codecs['wav']) {
+                    config.TTS_FORMAT = 'wav';
+                    config.TTS_QUALITY = 'lo';
+                }
+
+                if (config.TTS_FORMAT) {
+                    application.initSound(config);
+                }
+
+                if (MTR.NativeSpeakerView.isAvailable()) {
+                    application.initNativeSound(config);
+                }
+
+                if (win.ya && win.ya.speechkit && (win.ya.speechkit.isSupported() || win.ya.speechkit.isWebAudioSupported())) {
+                    application.initSpeechKit(config, win.ya.speechkit);
+                }
+
+                
+                    application.initDescription(config);
+                
+
+                application
+                    .initTooltip(config)
+                    .initTableau(config)
+                    .initUrlView(config)
+                    .initSpeller(config)
+                    .initOptions(config)
+                    .initResizer(config)
+                    .initHistory(config)
+                    .initKeyboard(config)
+                    .initSynonyms(config)
+                    .initPredictor(config)
+                    .initDictionary(config)
+                    .initLangHistory(config)
+                    .initShareButton(config)
+                    .initSearchButton(config)
+                    .initExternalView(config)
+                    .initTranslationEditor(config)
+                    .start(config)
+                    .initLangs(config) // !!!
+                    .on('track', function (goal) {
+                        sendMetrikaGoal(goal);
+
+                        sendClientGoal({
+                            sid: config.SID,
+                            srv: config.SRV,
+                            view: config.PAGEVIEW,
+                            event: goal.toLowerCase()
+                        });
+                    })
+                    .on('pageLoaded', function () {
+                        var appData = this.toJSON(),
+                            appView = this.getView(),
+                            settings = this._settings;
+
+                        if (appView.hasState('allowed_footer-promo')) {
+                            sendMetrikaGoal('FOOTER_PROMO_SHOW');
+
+                            sendClientGoal({
+                                sid: config.SID,
+                                srv: config.SRV,
+                                view: config.PAGEVIEW,
+                                event: 'footer_promo_show'
+                            });
+                        }
+
+                        sendClientGoal({
+                            sid: config.SID,
+                            srv: config.SRV,
+                            view: config.PAGEVIEW,
+                            event: 'options',
+                            dir: settings.getProperty('auto') ? 1 : 0,
+                            sugg: settings.isOptionEnabled('suggest') ? 1 : 0,
+                            dict: settings.isOptionEnabled('dictionary') ? 1 : 0,
+                            enter: settings.isOptionEnabled('shift') ? 1 : 0,
+                            speller: settings.isOptionEnabled('speller') ? 1 : 0,
+                            autoheight: settings.isOptionEnabled('autoheight') ? 1 : 0
+                        });
+
+                        
+                    })
+                    .on('optionsChanged', function (name, enabled) {
+                        sendMetrikaGoal('OPTIONS_CLICK_' + name.toUpperCase());
+
+                        sendClientGoal({
+                            sid: config.SID,
+                            srv: config.SRV,
+                            view: config.PAGEVIEW,
+                            name: name,
+                            event: 'options_click',
+                            enabled: enabled ? 1 : 0
+                        });
+                    })
+                    .on('translateQuery', function () {
+                        sendMetrikaGoal('TEXT_TRANSLATE');
+                    })
+                    .on('textCopy', function (copy) {
+                        var event = 'text_' + (copy ? 'copy' : 'select'),
+                            appData = this.toJSON();
+
+                        sendMetrikaGoal(event.toUpperCase());
+
+                        sendClientGoal({
+                            sid: config.SID,
+                            srv: config.SRV,
+                            dir: appData.srcLang + '-' + appData.dstLang,
+                            view: config.PAGEVIEW,
+                            event: event,
+                            src_length: appData.text.length,
+                            dst_length: appData.translation.length
+                        });
+                    })
+                    .on('textDownload', function () {
+                        var appData = this.toJSON();
+
+                        sendMetrikaGoal('TEXT_DOWNLOAD');
+
+                        sendClientGoal({
+                            sid: config.SID,
+                            srv: config.SRV,
+                            dir: appData.srcLang + '-' + appData.dstLang,
+                            view: config.PAGEVIEW,
+                            event: 'text_download',
+                            src_length: appData.text.length,
+                            dst_length: appData.translation.length
+                        });
+                    })
+                    .on('resizerResize', function (props) {
+                        sendClientGoal({
+                            sid: config.SID,
+                            srv: config.SRV,
+                            view: config.PAGEVIEW,
+                            event: 'resizer_resize',
+                            old_height: props.oldHeight,
+                            new_height: props.newHeight,
+                            main_height: props.mainHeight
+                        });
+
+                        sendMetrikaGoal('RESIZER_RESIZE');
+                    })
+                    .on('predictorApply', function (props) {
+                        var error,
+                            appData = this.toJSON(),
+                            suggest = JSON.parse(props.hints);
+
+                        if (props.pos < 0) {
+                            error = (props.text.slice(props.pos) !== suggest[0].substr(0, Math.abs(props.pos)));
+                        }
+
+                        sendClientGoal({
+                            sid: config.SID,
+                            srv: config.SRV,
+                            src: props.text,
+                            pos: props.pos,
+                            eow: props.endOfWord ? 1 : 0,
+                            view: config.PAGEVIEW,
+                            lang: appData.srcLang,
+                            event: 'predictor_apply',
+                            error: error ? 1 : 0,
+                            reason: props.reason,
+                            suggest: suggest
+                        });
+
+                        sendMetrikaGoal('PREDICTOR_APPLY');
+                    })
+                    .on('predictorShow', function (props) {
+                        var error,
+                            appData = this.toJSON(),
+                            suggest = JSON.parse(props.hints);
+
+                        if (props.pos < 0) {
+                            error = (props.text.slice(props.pos) !== suggest[0].substr(0, Math.abs(props.pos)));
+                        }
+
+                        sendClientGoal({
+                            sid: config.SID,
+                            srv: config.SRV,
+                            src: props.text,
+                            pos: props.pos,
+                            eow: props.endOfWord ? 1 : 0,
+                            view: config.PAGEVIEW,
+                            lang: appData.srcLang,
+                            event: 'predictor_show',
+                            error: error ? 1 : 0,
+                            reason: props.reason,
+                            suggest: suggest
+                        });
+                    })
+                    .on('spellerClick', function (item) {
+                        var appData = this.toJSON();
+
+                        sendClientGoal({
+                            sid: config.SID,
+                            srv: config.SRV,
+                            view: config.PAGEVIEW,
+                            word: item.word,
+                            lang: appData.srcLang,
+                            event: 'speller_click',
+                            text_length: util.trim(appData.text).length,
+                            replacements: item.s.length
+                        });
+
+                        sendMetrikaGoal('SPELLER_CLICK');
+                    })
+                    .on('spellerApply', function (replacement, item) {
+                        var appData = this.toJSON();
+
+                        sendClientGoal({
+                            sid: config.SID,
+                            srv: config.SRV,
+                            view: config.PAGEVIEW,
+                            word: item.word,
+                            lang: appData.srcLang,
+                            event: 'speller_apply',
+                            text_length: util.trim(appData.text).length,
+                            replacement: replacement
+                        });
+
+                        sendMetrikaGoal('SPELLER_APPLY');
+                    })
+                    .on('translatePage', function () {
+                        var appData = this.toJSON();
+
+                        sendClientGoal({
+                            sid: config.SID,
+                            srv: config.SRV,
+                            dir: appData.srcLang + '-' + appData.dstLang,
+                            view: config.PAGEVIEW,
+                            event: 'url_translate',
+                            url: appData.text
+                        });
+
+                        sendMetrikaGoal('URL_TRANSLATE');
+                    })
+                    .on('langSelectOpen', function (props) {
+                        var appData = this.toJSON(),
+                            select = '';
+
+                        if (appData.srcLang === props.value) {
+                            select = 'src';
+                        } else if (appData.dstLang === props.value) {
+                            select = 'dst';
+                        }
+
+                        sendClientGoal({
+                            sid: config.SID,
+                            srv: config.SRV,
+                            view: config.PAGEVIEW,
+                            type: select,
+                            event: 'langselect_open'
+                        });
+
+                        sendMetrikaGoal('LANGSELECT_OPEN_' + select.toUpperCase());
+                    })
+                    .on('langChanged', function (name, options) {
+                        var select = name === 'srcLang' ? 'src' : 'dst',
+                            recent = options.sender === 'langHistory' ? 'RECENT_' : '';
+
+                        sendClientGoal({
+                            sid: config.SID,
+                            srv: config.SRV,
+                            view: config.PAGEVIEW,
+                            type: select,
+                            event: 'langselect_select',
+                            recent: recent ? 1 : 0
+                        });
+
+                        sendMetrikaGoal('LANGSELECT_' + recent + 'SELECT_' + select.toUpperCase());
+                    })
+                    .on('speak', function (props) {
+                        var appData = this.toJSON(),
+                            ttsLang = '',
+                            ttsType = '';
+
+                        if (config.TTS_LANGS[appData.srcLang] === props.lang) {
+                            ttsLang = appData.srcLang;
+                            ttsType = 'source';
+                        } else if (config.TTS_LANGS[appData.dstLang] === props.lang) {
+                            ttsLang = appData.dstLang;
+                            ttsType = 'target';
+                        }
+
+                        sendClientGoal({
+                            sid: config.SID,
+                            srv: config.SRV,
+                            view: config.PAGEVIEW,
+                            lang: ttsLang,
+                            type: ttsType,
+                            event: 'tts_play',
+                            engine: 'yandex',
+                            text: props.text
+                        });
+
+                        sendMetrikaGoal('TTS_PLAY');
+                    })
+                    .on('nativeSpeak', function (props) {
+                        var appData = this.toJSON(),
+                            ttsType = appData.srcLang === props.voice ? 'source' :
+                            appData.dstLang === props.voice ? 'target' : '';
+
+                        sendClientGoal({
+                            sid: config.SID,
+                            srv: config.SRV,
+                            view: config.PAGEVIEW,
+                            lang: props.voice,
+                            type: ttsType,
+                            event: 'tts_play',
+                            engine: 'native',
+                            text: props.text
+                        });
+
+                        sendMetrikaGoal('TTS_NATIVE_PLAY');
+                    })
+                    .on('synonymsInsert', function (value, options) {
+                        var appData = this.toJSON();
+
+                        sendClientGoal({
+                            sid: config.SID,
+                            srv: config.SRV,
+                            src: options.oldValue,
+                            view: config.PAGEVIEW,
+                            lang: appData.srcLang,
+                            event: 'synonyms_insert',
+                            synonym: value
+                        });
+
+                        sendMetrikaGoal('SYNONYMS_INSERT');
+                    })
+                    .on('sendSms', function (props, enabled) {
+                        sendClientGoal({
+                            sid: config.SID,
+                            srv: config.SRV,
+                            view: config.PAGEVIEW,
+                            event: 'sms_send_click',
+                            phone: props.phone,
+                            enabled: enabled ? 1 : 0
+                        });
+
+                        if (enabled) {
+                            sendMetrikaGoal('SMS_SEND_CLICK');
+                        }
+                    })
+                    .on('smsError', function (props, error) {
+                        sendClientGoal({
+                            sid: config.SID,
+                            srv: config.SRV,
+                            view: config.PAGEVIEW,
+                            event: 'sms_error',
+                            error: error.code,
+                            phone: props.phone
+                        });
+
+                        sendMetrikaGoal('SMS_ERROR');
+                    })
+                    .on('dictLinkClick', function () {
+                        sendMetrikaGoal('DICT_LINK_CLICK');
+
+                        sendClientGoal({
+                            sid: config.SID,
+                            srv: config.SRV,
+                            view: config.PAGEVIEW,
+                            event: 'dict_link_click'
+                        });
+                    })
+                    .on('shareData', function (props) {
+                        var appData = this.toJSON();
+
+                        sendClientGoal({
+                            sid: config.SID,
+                            srv: config.SRV,
+                            dir: appData.srcLang + '-' + appData.dstLang,
+                            view: config.PAGEVIEW,
+                            type: props.service,
+                            event: 'sharing_share',
+                            src: appData.text,
+                            dst: appData.translation
+                        });
+
+                        sendMetrikaGoal('SHARING_SHARE_' + props.service.toUpperCase());
+                    })
+                    .on('writeMail', function () {
+                        var appData = this.toJSON();
+
+                        sendClientGoal({
+                            sid: config.SID,
+                            srv: config.SRV,
+                            dir: appData.srcLang + '-' + appData.dstLang,
+                            view: config.PAGEVIEW,
+                            type: 'email',
+                            event: 'sharing_share',
+                            src: appData.text,
+                            dst: appData.translation
+                        });
+
+                        sendMetrikaGoal('SHARING_SHARE_MAIL');
+                    })
+                    .on('editorResult', function (value, oldValue) {
+                        var appData = this.toJSON();
+
+                        sendClientGoal({
+                            sid: config.SID,
+                            srv: config.SRV,
+                            dir: appData.srcLang + '-' + appData.dstLang,
+                            view: config.PAGEVIEW,
+                            event: 'translation_edit',
+                            src: appData.trText,
+                            dst: oldValue,
+                            edit: value
+                        });
+
+                        sendMetrikaGoal('TRANSLATION_EDIT');
+                    })
+                    .on('editorToggle', function (options) {
+                        var appData = this.toJSON(),
+                            eventName = 'translation_edit_' + (options.open ? 'open' : 'close');
+
+                        sendClientGoal({
+                            sid: config.SID,
+                            srv: config.SRV,
+                            dir: appData.srcLang + '-' + appData.dstLang,
+                            view: config.PAGEVIEW,
+                            type: options.type,
+                            event: eventName,
+                            src: appData.trText,
+                            dst: appData.translation,
+                            edit: options.value !== appData.translation ? options.value : ''
+                        });
+
+                        sendMetrikaGoal(eventName.toUpperCase());
+                    })
+                    .on('dictComplaint', function (props) {
+                        var appData = this.toJSON();
+
+                        sendClientGoal({
+                            sid: config.SID,
+                            srv: config.SRV,
+                            dir: appData.srcLang + '-' + appData.dstLang,
+                            src: appData.selText || appData.trText,
+                            dst: props.value,
+                            type: props.type,
+                            view: config.PAGEVIEW,
+                            event: 'dict_complain',
+                            title: props.title,
+                            number: props.groupNumber,
+                            comment: props.comment,
+                            selection: appData.selText ? 1 : 0,
+                            part_of_speech: props.partOfSpeech
+                        });
+
+                        sendMetrikaGoal('DICT_COMPLAIN');
+                    })
+                    .on('dictComplaintToggle', function (options) {
+                        var appData = this.toJSON(),
+                            eventName = 'dict_complain_' + (options.open ? 'open' : 'close');
+
+                        sendClientGoal({
+                            sid: config.SID,
+                            srv: config.SRV,
+                            dir: appData.srcLang + '-' + appData.dstLang,
+                            src: appData.selText || appData.trText,
+                            view: config.PAGEVIEW,
+                            type: options.type,
+                            event: eventName,
+                            selection: appData.selText ? 1 : 0
+                        });
+
+                        sendMetrikaGoal(eventName.toUpperCase());
+                    })
+                    .on('favToggle', function (hidden) {
+                        var eventName = 'favourites_' + (hidden ? 'close' : 'open');
+
+                        sendMetrikaGoal(eventName.toUpperCase());
+
+                        sendClientGoal({
+                            sid: config.SID,
+                            srv: config.SRV,
+                            view: config.PAGEVIEW,
+                            event: eventName
+                        });
+                    })
+                    .on('favFilterActivate', function () {
+                        sendMetrikaGoal('FAVOURITES_FILTER_SEARCH');
+
+                        sendClientGoal({
+                            sid: config.SID,
+                            srv: config.SRV,
+                            view: config.PAGEVIEW,
+                            event: 'favourites_filter_search'
+                        });
+                    })
+                    .on('favClear', function () {
+                        sendMetrikaGoal('FAVOURITES_CLEAR');
+
+                        sendClientGoal({
+                            sid: config.SID,
+                            srv: config.SRV,
+                            view: config.PAGEVIEW,
+                            event: 'favourites_clear'
+                        });
+                    })
+                    .on('favInsert', function () {
+                        sendMetrikaGoal('FAVOURITES_INSERT');
+
+                        sendClientGoal({
+                            sid: config.SID,
+                            srv: config.SRV,
+                            view: config.PAGEVIEW,
+                            event: 'favourites_insert'
+                        });
+                    })
+                    .on('favAdd', function () {
+                        sendMetrikaGoal('FAVOURITES_ADD');
+
+                        sendClientGoal({
+                            sid: config.SID,
+                            srv: config.SRV,
+                            view: config.PAGEVIEW,
+                            event: 'favourites_add'
+                        });
+                    })
+                    .on('favDelete', function () {
+                        sendMetrikaGoal('FAVOURITES_DELETE');
+
+                        sendClientGoal({
+                            sid: config.SID,
+                            srv: config.SRV,
+                            view: config.PAGEVIEW,
+                            event: 'favourites_delete'
+                        });
+                    })
+                    .on('favError', function (error) {
+                        if (error.code !== MTR.PhraseBookModel.codes.BAD_VERSION) {
+                            sendMetrikaGoal('FAVOURITES_ERROR');
+
+                            sendClientGoal({
+                                sid: config.SID,
+                                srv: config.SRV,
+                                view: config.PAGEVIEW,
+                                event: 'favourites_error'
+                            });
+                        }
+                    })
+                    .on('keyboardOpen', function () {
+                        var appData = this.toJSON();
+
+                        sendMetrikaGoal('KEYBOARD_OPEN');
+
+                        sendClientGoal({
+                            sid: config.SID,
+                            srv: config.SRV,
+                            lang: appData.srcLang,
+                            view: config.PAGEVIEW,
+                            event: 'keyboard_open'
+                        });
+                    })
+                    .on('refreshAlertShow', function (code) {
+                        sendClientGoal({
+                            sid: config.SID,
+                            srv: config.SRV,
+                            view: config.PAGEVIEW,
+                            event: 'refresh_alert_show',
+                            error_code: code
+                        });
+
+                        sendMetrikaGoal('REFRESH_ALERT_SHOW');
+                    })
+                    .on('synRendered', function () {
+                        var appData = this.toJSON();
+
+                        if (appData.trText === appData.selText) {
+                            return;
+                        }
+
+                        if (
+                            tempSynonymsData.trText !== appData.trText
+                            ||
+                            tempSynonymsData.selText !== appData.selText
+                            ||
+                            tempSynonymsData.srcLang !== appData.srcLang
+                        ) {
+                            sendClientGoal({
+                                sid: config.SID,
+                                srv: config.SRV,
+                                dir: appData.srcLang + '-' + appData.dstLang,
+                                src: appData.selText || appData.trText,
+                                view: config.PAGEVIEW,
+                                event: 'synonyms_show',
+                                selection: appData.selText ? 1 : 0,
+                                text_length: util.trim(appData.text).length
+                            });
+
+                            tempSynonymsData.trText = appData.trText;
+                            tempSynonymsData.selText = appData.selText;
+                            tempSynonymsData.srcLang = appData.srcLang;
+                        }
+                    })
+                    .on('dictRendered', function (options) {
+                        var appData = this.toJSON();
+
+                        if (appData.trText === appData.selText) {
+                            return;
+                        }
+
+                        if (
+                            tempDictionaryData.trText !== appData.trText
+                            ||
+                            tempDictionaryData.selText !== appData.selText
+                            ||
+                            tempDictionaryData.srcLang !== appData.srcLang
+                            ||
+                            tempDictionaryData.dstLang !== appData.dstLang
+                        ) {
+                            sendClientGoal({
+                                sid: config.SID,
+                                srv: config.SRV,
+                                dir: appData.srcLang + '-' + appData.dstLang,
+                                src: appData.selText || appData.trText,
+                                view: config.PAGEVIEW,
+                                event: 'dict_show',
+                                has_more: options.more ? 1 : 0,
+                                selection: appData.selText ? 1 : 0,
+                                text_length: util.trim(appData.text).length
+                            });
+
+                            tempDictionaryData.trText = appData.trText;
+                            tempDictionaryData.selText = appData.selText;
+                            tempDictionaryData.srcLang = appData.srcLang;
+                            tempDictionaryData.dstLang = appData.dstLang;
+                        }
+                    })
+                    .on('dictArticleToggle', function (reliable) {
+                        var event = 'dict_show_' + (reliable ? 'more' : 'less'),
+                            appData = this.toJSON();
+
+                        sendMetrikaGoal(event.toUpperCase());
+
+                        sendClientGoal({
+                            sid: config.SID,
+                            srv: config.SRV,
+                            dir: appData.srcLang + '-' + appData.dstLang,
+                            src: appData.selText || appData.trText,
+                            view: config.PAGEVIEW,
+                       

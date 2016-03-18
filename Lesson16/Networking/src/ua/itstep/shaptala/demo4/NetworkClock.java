@@ -12,7 +12,7 @@ public class NetworkClock {
 			DatagramPacket packet = new DatagramPacket(new byte[1024], 1024);			
 			while (true) {
 				try {
-					socket.receive(packet);
+					socket.receive(packet);					
 					System.out.println(new String(packet.getData(), packet.getOffset(), packet.getLength()));
 				} catch (IOException e) {					
 					e.printStackTrace();
