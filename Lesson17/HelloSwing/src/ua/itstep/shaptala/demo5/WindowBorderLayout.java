@@ -20,7 +20,7 @@ public class WindowBorderLayout extends JFrame {
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 		setSize(350, 150);
 		
-		// Панелья для размещения элементов управления
+		// Панель для размещения элементов управления
 		Container panel = getContentPane();
 				
 		panel.add(new JButton("Кнопка"), BorderLayout.NORTH);

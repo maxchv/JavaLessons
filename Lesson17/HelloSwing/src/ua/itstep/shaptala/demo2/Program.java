@@ -4,7 +4,7 @@ import javax.swing.JFrame;
 
 public class Program {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) {		
 		JFrame window = new SimpleWindow("Пробное окно");
 		window.setVisible(true);
 	}

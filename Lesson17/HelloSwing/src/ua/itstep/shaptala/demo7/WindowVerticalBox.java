@@ -1,15 +1,10 @@
 package ua.itstep.shaptala.demo7;
 
-import java.awt.BorderLayout;
 import java.awt.Container;
-import java.awt.FlowLayout;
-import java.awt.GridLayout;
 
 import javax.swing.Box;
 import javax.swing.JButton;
-import javax.swing.JColorChooser;
 import javax.swing.JFrame;
-import javax.swing.JPanel;
 
 public class WindowVerticalBox extends JFrame {
 	

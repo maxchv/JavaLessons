@@ -24,7 +24,7 @@ public class WindowGridLayout extends JFrame {
 		// Панелья для размещения элементов управления
 		Container panel = new JPanel();
 		
-		panel.setLayout(new GridLayout(2,  3, 5, 10));
+		panel.setLayout(new GridLayout(2, 3, 5, 10));
 				
 		panel.add(new JButton("Кнопка"));
 		panel.add(new JButton("+"));
