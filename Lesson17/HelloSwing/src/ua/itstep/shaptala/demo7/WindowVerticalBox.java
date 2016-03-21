@@ -18,18 +18,31 @@ public class WindowVerticalBox extends JFrame {
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 		setSize(250, 100);
 		
-		Container box = Box.createVerticalBox();
+		Container box = Box.createHorizontalBox(); //Box.createVerticalBox();
 						
 		box.add(new JButton(" нопка"));
-		box.add(Box.createVerticalStrut(10));
+		
+		//box.add(Box.createVerticalStrut(10));
+		box.add(Box.createHorizontalStrut(10));
+		
 		box.add(new JButton("+"));
-		box.add(Box.createVerticalStrut(10));
+		
+		//box.add(Box.createVerticalStrut(10));
+		box.add(Box.createHorizontalStrut(10));
+		
 		JButton rightButton = new JButton("-");
+		
 		//rightButton.setAlignmentX(JColorChooser.RIGHT_ALIGNMENT);
+		
 		box.add(rightButton);
-		box.add(Box.createVerticalStrut(10));
+		
+		//box.add(Box.createVerticalStrut(10));
+		box.add(Box.createHorizontalStrut(10));
+		
 		box.add(new JButton(" нопка с длинной надписью"));
-		box.add(Box.createVerticalStrut(10));
+		
+		box.add(Box.createHorizontalStrut(10));
+		//box.add(Box.createVerticalStrut(10));
 				
 		setContentPane(box);
 	}

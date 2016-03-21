@@ -19,14 +19,15 @@ public class WindowSetLocation extends JFrame {
 		panel.setLayout(null);
 		
 		JButton btn = new JButton(" нопка");
-		btn.setSize(80, 20);
-		//btn.setSize(btn.getPreferredSize());
+		//btn.setSize(80, 20);
+		btn.setSize(btn.getPreferredSize());
+		
 		btn.setLocation(20, 20);
 		panel.add(btn);		
 						
 		btn = new JButton(" нопка с длинной надписью");
-		btn.setSize(120, 40);
-		//btn.setSize(btn.getPreferredSize());
+		//btn.setSize(120, 40);
+		btn.setSize(btn.getPreferredSize());
 		btn.setLocation(70, 50);
 		panel.add(btn);
 				
