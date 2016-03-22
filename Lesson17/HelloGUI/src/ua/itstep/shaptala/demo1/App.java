@@ -6,6 +6,10 @@ import java.awt.event.MouseListener;
 import java.awt.event.MouseMotionListener;
 
 import javax.swing.*;
+import javax.swing.border.AbstractBorder;
+import javax.swing.border.TitledBorder;
+
+import javafx.scene.layout.Border;
 
 public class App {
 
@@ -33,6 +37,7 @@ class MyFrame extends JFrame implements MouseListener {
 	
 	MyFrame(String title) {
 		super(title);
+		
 		_this = this;
 		
 		JButton btn = new JButton("Кнопка 1");

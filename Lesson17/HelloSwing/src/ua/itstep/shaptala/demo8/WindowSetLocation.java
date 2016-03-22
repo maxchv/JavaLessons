@@ -1,5 +1,6 @@
 package ua.itstep.shaptala.demo8;
 
+import javax.swing.BorderFactory;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
@@ -19,6 +20,8 @@ public class WindowSetLocation extends JFrame {
 		panel.setLayout(null);
 		
 		JButton btn = new JButton("Кнопка");
+		
+		btn.setBorder(BorderFactory.createTitledBorder("test"));
 		//btn.setSize(80, 20);
 		btn.setSize(btn.getPreferredSize());
 		
