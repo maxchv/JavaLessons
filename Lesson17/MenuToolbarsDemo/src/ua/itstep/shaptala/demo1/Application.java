@@ -34,8 +34,9 @@ public class Application extends JFrame implements ActionListener {
 		textArea.setMargin(new java.awt.Insets(10, 10, 10, 10));
 		getContentPane().add(toolbar, BorderLayout.NORTH);		
 		getContentPane().add(new JScrollPane(textArea), BorderLayout.CENTER);
-		getContentPane().add(new JLabel("Ready"), BorderLayout.SOUTH);
+		getContentPane().add(new JLabel("Ready"), BorderLayout.SOUTH);		
 		pack();
+		setLocationRelativeTo(null);
 	}
 
 	private JMenuBar createMainMenu() {
