@@ -42,10 +42,13 @@ public class JListDemo extends JFrame implements ListSelectionListener {
 
 		box.add(new JLabel("VERTICAL and SINGLE_SELECTION"));
 		box.add(createList(JList.VERTICAL, ListSelectionModel.SINGLE_SELECTION));
+		
 		box.add(new JLabel("VERTICAL_WRAP and SINGLE_INTERVAL_SELECTION"));
 		box.add(createList(JList.VERTICAL_WRAP, ListSelectionModel.SINGLE_INTERVAL_SELECTION));
+		
 		box.add(new JLabel("HORIZONTAL_WRAP and MULTIPLE_INTERVAL_SELECTION"));
 		box.add(createList(JList.HORIZONTAL_WRAP, ListSelectionModel.MULTIPLE_INTERVAL_SELECTION));
+		
 		output = new JLabel("output");
 		box.add(output);
 		return box;
