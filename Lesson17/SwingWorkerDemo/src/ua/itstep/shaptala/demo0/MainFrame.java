@@ -83,6 +83,6 @@ public class MainFrame extends JFrame {
 				ex.printStackTrace();
 			}
 		}
-		lblStatus.setText("Completed.");
+		lblStatus.setText("Completed");
 	}
 }
