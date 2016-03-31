@@ -7,6 +7,7 @@ import java.awt.RenderingHints;
 
 import javax.swing.DefaultListCellRenderer;
 import javax.swing.DefaultListModel;
+import javax.swing.Icon;
 import javax.swing.ImageIcon;
 import javax.swing.JFileChooser;
 import javax.swing.JFrame;
@@ -97,7 +98,6 @@ public class JSplitPanelFrame {
 			}
 		});
 		list.setCellRenderer(new DefaultListCellRenderer() {
-			
 			private Image getScaledImage(Image srcImg, int w, int h){
 		        BufferedImage resizedImg = new BufferedImage(w, h, BufferedImage.TYPE_INT_RGB);
 		        Graphics2D g2 = resizedImg.createGraphics();
@@ -112,7 +112,7 @@ public class JSplitPanelFrame {
 					boolean cellHasFocus) {
 				// TODO Auto-generated method stub
 				JLabel lbl = (JLabel)super.getListCellRendererComponent(list, value, index, isSelected, cellHasFocus);
-				lbl.setIcon(new ImageIcon(getScaledImage(new ImageIcon(value.toString()).getImage(), 32, 32)));				
+				//lbl.setIcon(new ImageIcon(getScaledImage(new ImageIcon(value.toString()).getImage(), 32, 32)));				
 				lbl.setHorizontalTextPosition(JLabel.RIGHT);
 				return lbl;
 			}
@@ -122,7 +122,18 @@ public class JSplitPanelFrame {
 		list.setBorder(new EmptyBorder(5, 5, 5, 5));
 		splitPane.setLeftComponent(new JScrollPane(list));
 		
-		
+		JLabel out = new JLabel();
+		list.addListSelectionListener(new ListSelectionListener() {			
+			@Override
+			public void valueChanged(ListSelectionEvent e) {
+				Path path = list.getSelectedValue();
+				Icon img = new ImageIcon(path.toString());
+				out.setSize(img.getIconWidth(), img.getIconHeight());
+				out.setIcon(img);
+			}
+		});
+		splitPane.setDividerLocation(150);
+		splitPane.setRightComponent(out);
 		
 		JMenuBar menuBar = new JMenuBar();
 		frame.setJMenuBar(menuBar);
