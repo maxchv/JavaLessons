@@ -3,3 +3,6 @@ http://www.kgeorgiy.info/courses/java-advanced/
 
 Шпаргалка Java программиста 4. Java Stream API
 https://habrahabr.ru/company/luxoft/blog/270383/
+
+Установка и настройка среды Tomcat
+https://www3.ntu.edu.sg/home/ehchua/programming/howto/Tomcat_HowTo.html
