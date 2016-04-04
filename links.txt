@@ -4,5 +4,16 @@ http://www.kgeorgiy.info/courses/java-advanced/
 Шпаргалка Java программиста 4. Java Stream API
 https://habrahabr.ru/company/luxoft/blog/270383/
 
+<<<<<<< HEAD
 Установка и настройка среды Tomcat
 https://www3.ntu.edu.sg/home/ehchua/programming/howto/Tomcat_HowTo.html
+=======
+Пример программ на swing
+http://java-swing-tips.blogspot.com/
+
+Как создать Servlet? Полное руководство
+http://devcolibri.com/4284
+
+Run Bash on Ubuntu on Windows
+https://blogs.windows.com/buildingapps/2016/03/30/run-bash-on-ubuntu-on-windows/
+>>>>>>> origin/master
