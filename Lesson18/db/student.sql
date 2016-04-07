@@ -12,7 +12,7 @@ create table if not exists Students
     DateOfBirth date,
     RegistationData timestamp,
     LastLoginData date not null
-);
+)DEFAULT CHARACTER SET = utf8;
 alter table Students modify UserName varchar(255) not null unique;
 
 insert into Students(UserName, Email, Password, FirstName, LastName, Gender, DateOfBirth, LastLoginData) values

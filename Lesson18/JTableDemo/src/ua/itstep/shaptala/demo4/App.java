@@ -55,7 +55,7 @@ public class App {
 		JScrollPane scrollPane = new JScrollPane();
 		frame.getContentPane().add(scrollPane, BorderLayout.CENTER);
 		
-		table = new JTable(new SqlTableModel("max", "max"));	
+		table = new JTable(new SqlTableModel("root", "ghbvf"));	
 		
 		scrollPane.setViewportView(table);
 	}
