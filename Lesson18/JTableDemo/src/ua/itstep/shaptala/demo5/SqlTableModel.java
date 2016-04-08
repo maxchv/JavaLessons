@@ -1,4 +1,4 @@
-package ua.itstep.shaptala.demo4;
+package ua.itstep.shaptala.demo5;
 
 import javax.swing.table.AbstractTableModel;
 import java.sql.*;

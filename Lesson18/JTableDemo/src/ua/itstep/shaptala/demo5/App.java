@@ -1,4 +1,4 @@
-package ua.itstep.shaptala.demo4;
+package ua.itstep.shaptala.demo5;
 
 import java.awt.EventQueue;
 import java.awt.event.KeyEvent;
