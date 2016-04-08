@@ -1,4 +1,4 @@
-package ua.itstep.shaptala.demo4;
+package ua.itstep.shaptala.demo6;
 
 import java.awt.EventQueue;
 import java.awt.event.KeyEvent;
@@ -15,11 +15,17 @@ import javax.swing.table.JTableHeader;
 
 import java.beans.PropertyChangeListener;
 import java.beans.PropertyChangeEvent;
+import javax.swing.JPanel;
+import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class App {
 
 	private JFrame frame;
 	private JTable table;
+	private JPanel panel;
+	private JButton btnNewButton;
 
 	/**
 	 * Launch the application.
@@ -54,9 +60,25 @@ public class App {
 		
 		JScrollPane scrollPane = new JScrollPane();
 		frame.getContentPane().add(scrollPane, BorderLayout.CENTER);
-		
+		try {
+			Class.forName("com.mysql.jdbc.Driver");
+		} catch (ClassNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		table = new JTable(new SqlTableModel("root", "qwerty"));	
 		
 		scrollPane.setViewportView(table);
+		
+		panel = new JPanel();
+		frame.getContentPane().add(panel, BorderLayout.NORTH);
+		
+		btnNewButton = new JButton("NewItem");
+		btnNewButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+			}
+		});
+		panel.add(btnNewButton);
 	}
 }

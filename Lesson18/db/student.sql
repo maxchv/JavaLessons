@@ -84,3 +84,8 @@ create table if not exists Enrollments
     foreign key (CourseID) references Courses(Id),
     foreign key (StudentID) references Students(Id)
 );
+
+select * from students;
+
+alter table students
+modify LastLoginData varchar(256);
