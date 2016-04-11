@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app>
+	<!-- определение сервлета -->
+	<servlet>
+		<!-- имя, или идентификатор, сервлета -->
+		<servlet-name>HelloServlet</servlet-name>
+		<!-- полное имя класса сервлета -->
+		<servlet-class>HelloServlet</servlet-class>
+	</servlet>
+	<!-- связывание сервлета с url запроса -->
+	<servlet-mapping>
+		<!-- имя сервлета -->
+		<servlet-name>HelloServlet</servlet-name>
+		<!-- url запроса, на который вызывается сервлет -->
+		<url-pattern>/Hello</url-pattern>
+	</servlet-mapping>
+</web-app>
