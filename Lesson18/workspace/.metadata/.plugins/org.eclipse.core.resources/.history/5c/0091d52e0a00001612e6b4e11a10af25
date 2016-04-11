@@ -1,0 +1,10 @@
+package ua.itstep.shaptala;
+import com.sun.net.httpserver.*;
+
+public class Server {
+
+	public static void main(String[] args) {
+		HttpServer 
+	}
+
+}

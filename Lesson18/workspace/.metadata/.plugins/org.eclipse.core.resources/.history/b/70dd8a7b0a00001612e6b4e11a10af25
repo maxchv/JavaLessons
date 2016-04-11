@@ -1,0 +1,20 @@
+package ua.itstep.shaptala;
+import java.io.IOException;
+import java.net.InetAddress;
+import java.net.InetSocketAddress;
+
+import com.sun.net.httpserver.*;
+
+public class Server {
+
+	public static void main(String[] args) {
+		InetSocketAddress addr = new InetSocketAddress(8080); 
+		try {
+			HttpServer server;
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+
+}

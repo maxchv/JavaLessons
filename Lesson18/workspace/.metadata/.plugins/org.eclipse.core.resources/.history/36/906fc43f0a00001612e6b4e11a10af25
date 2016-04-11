@@ -1,0 +1,14 @@
+package ua.itstep.shaptala;
+import java.net.InetAddress;
+import java.net.InetSocketAddress;
+
+import com.sun.net.httpserver.*;
+
+public class Server {
+
+	public static void main(String[] args) {
+		InetAddress addr = new InetSocketAddress(8080); 
+		HttpServer server = HttpServer.create(arg0, arg1);
+	}
+
+}
