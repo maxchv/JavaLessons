@@ -2,4 +2,5 @@
 <qualifiedTypeNameHistroy>
 <fullyQualifiedTypeName name="java.net.InetAddress"/>
 <fullyQualifiedTypeName name="java.net.InetSocketAddress"/>
+<fullyQualifiedTypeName name="java.io.PrintWriter"/>
 </qualifiedTypeNameHistroy>
