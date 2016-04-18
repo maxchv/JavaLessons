@@ -1,0 +1,16 @@
+@CHARSET "UTF-8";
+#login {
+	width: 300px;
+	height: 250px;
+	border: 1px solid black;
+	border-radius: 10px;
+}
+#login > label {
+	display: block;
+	margin: 10px;
+}
+
+#login > label > input {
+	display: block;
+	float: right;
+}

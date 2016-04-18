@@ -1,0 +1,7 @@
+@CHARSET "UTF-8";
+#login {
+	width: 300px;
+	heigth: 250px;
+	border: 1px solid black;
+	border-radius: 10px;
+}

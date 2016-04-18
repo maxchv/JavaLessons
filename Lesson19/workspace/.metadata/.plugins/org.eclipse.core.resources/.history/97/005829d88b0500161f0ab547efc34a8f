@@ -1,0 +1,31 @@
+@CHARSET "UTF-8";
+#login {
+	width: 300px;
+	height: 110px;
+	border: 1px solid black;
+	border-radius: 10px;
+	margin: 10% auto;
+}
+#login > label {
+	display: block;
+	margin: 10px;
+}
+
+#login > label > input {
+	display: block;
+	float: right;
+}
+
+#login > input[type=submit] {
+	margin: 10px;
+	display: block;
+	float: right;
+}
+
+#error {	
+	margin-top: 10px;
+	margin-left: 5px;
+	display: block;
+	float: left;
+	color: red;
+}

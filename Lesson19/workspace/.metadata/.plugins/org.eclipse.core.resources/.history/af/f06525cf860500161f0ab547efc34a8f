@@ -1,0 +1,61 @@
+package ua.itstep.shaptala;
+
+import java.io.IOException;
+
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.Cookie;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import sun.rmi.server.Dispatcher;
+
+/**
+ * Servlet implementation class Login
+ */
+@WebServlet("/Login")
+public class Login extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+       
+    /**
+     * @see HttpServlet#HttpServlet()
+     */
+    public Login() {
+        super();
+        // TODO Auto-generated constructor stub
+    }
+
+	/**
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {		
+		response.getWriter().append("Served at: ").append(request.getContextPath());
+	}
+
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		RequestDispatcher dispatcher = null;
+		
+		String login = request.getParameter("login");
+		String password = request.getParameter("password");
+		//response.getWriter().append("login: " + login + " password: " + password);
+		
+		if(login.equals("admin") && password.equals("123456"))
+		{
+			request.setAttribute("name", "Admin");
+			dispatcher = request.getRequestDispatcher("library.jsp"); 
+			Cookie cookie = new Cookie("", "");
+		}
+		else
+		{			
+			request.setAttribute("error", "Неверный логин или пароль");
+			dispatcher = request.getRequestDispatcher("index.jsp");
+		}
+		dispatcher.forward(request, response);
+	}
+
+}

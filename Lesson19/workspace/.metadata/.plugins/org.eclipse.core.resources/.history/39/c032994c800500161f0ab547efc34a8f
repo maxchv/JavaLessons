@@ -1,0 +1,32 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Библиотека</title>
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<form id="login" action="Login" method="post">
+	<label>
+		Login
+		<input type="text" placeholder="login" name="login" />
+	</label>
+	<label>
+		Password
+		<input type="password" placeholder="password" name="password" />
+	</label>
+	<span id="error">
+		<% Object error = request.getAttribute("error");
+			if(error != null) 
+			{
+				out.append(error);
+		%>
+	</span>
+	<input type="submit" />
+</form>
+
+</body>
+</html>
