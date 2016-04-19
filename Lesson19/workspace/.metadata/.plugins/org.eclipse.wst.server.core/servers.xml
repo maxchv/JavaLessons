@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <servers>
-  <server auto-publish-setting="2" auto-publish-time="1" configuration-id="/Servers/Tomcat v8.0 Server at localhost-config" deployDir="wtpwebapps" hostname="localhost" id="Tomcat v8.0 Server at localhost" name="Tomcat v8.0 Server at localhost" runtime-id="Apache Tomcat v8.0" server-type="org.eclipse.jst.server.tomcat.80" server-type-id="org.eclipse.jst.server.tomcat.80" start-timeout="45" stop-timeout="15" testEnvironment="true" timestamp="5">
-    <list key="modules" value0="LibraryProject::org.eclipse.jst.jee.server:LibraryProject::jst.web::3.1"/>
+  <server auto-publish-setting="2" auto-publish-time="1" configuration-id="/Servers/Tomcat v8.0 Server at localhost-config" deployDir="wtpwebapps" hostname="localhost" id="Tomcat v8.0 Server at localhost" name="Tomcat v8.0 Server at localhost" runtime-id="Apache Tomcat v8.0" server-type="org.eclipse.jst.server.tomcat.80" server-type-id="org.eclipse.jst.server.tomcat.80" start-timeout="45" stop-timeout="15" testEnvironment="true" timestamp="6">
+    <list key="modules" value0="JstlDemo::org.eclipse.jst.jee.server:JstlDemo::jst.web::3.1"/>
   </server>
   <server auto-publish-setting="2" auto-publish-time="1" configuration-id="/Servers/Tomcat v8.0 Server at localhost (2)-config" deployDir="wtpwebapps" hostname="localhost" id="Tomcat v8.0 Server at localhost (2)" name="Tomcat v8.0 Server at localhost (2)" runtime-id="Apache Tomcat v8.0" server-type="org.eclipse.jst.server.tomcat.80" server-type-id="org.eclipse.jst.server.tomcat.80" start-timeout="45" stop-timeout="15" testEnvironment="true" timestamp="1">
     <list key="modules" value0="MiFirstServlet::org.eclipse.jst.jee.server:MiFirstServlet::jst.web::3.1"/>
