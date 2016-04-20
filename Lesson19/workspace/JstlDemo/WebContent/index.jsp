@@ -15,7 +15,7 @@
 	<%-- request.setAttribute("msg", "Welcome!"); --%>
 	<c:set var="msg" value="Welcome!"/> 
 	<c:out value='${msg}' />
-	<c:remove var="${msg}"/>
+	<c:remove var="msg"/>
 	
 	<c:catch var="catchException">
 		<% int a = 10/0; %>
@@ -39,5 +39,31 @@
 		</c:otherwise>
 	</c:choose>
 
+	<sql:setDataSource var="studentsDb" url="jdbc:mysql://localhost/students" user="root" password="" driver="com.mysql.jdbc.Driver"/>
+	<sql:query dataSource="${studentsDb}" var="result">
+		select Id, UserName, FirstName, LastName from students;
+	</sql:query> 
+	<table border="1" width="100%">
+		<thead>
+			<tr>
+				<th>Id</th>				
+				<th>UserName</th>				
+				<th>FirstName</th>
+				<th>LastName</th>				
+			</tr>
+		</thead>
+		<tbody>
+			<c:forEach var="row" items="${result.rows}">
+				<tr>
+					<td><c:out value="${row.Id}"></c:out></td>
+					<td><c:out value="${row.UserName}"></c:out></td>
+					<td><c:out value="${row.FirstName}"></c:out></td>
+					<td><c:out value="${row.LastName}"></c:out></td>
+				</tr>
+			</c:forEach>
+		</tbody>
+	</table>
+	
+	
 </body>
 </html>
