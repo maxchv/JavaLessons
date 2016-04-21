@@ -17,7 +17,7 @@ import javax.servlet.http.Part;
  * Servlet implementation class UploadImages
  */
 @WebServlet("/UploadImages")
-@MultipartConfig(location="C:\\Users\\shaptala\\Documents\\GitHub\\JavaLessons\\Lesson19\\workspace\\Gallery\\WebContent\\uploads")
+@MultipartConfig
 public class UploadImages extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
