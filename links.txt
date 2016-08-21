@@ -1,3 +1,5 @@
+Спсок практических заданий по java
+
 Диаграммы: http://www.falkhausen.de/en/diagram/diagram.html
 http://www.kgeorgiy.info/courses/java-advanced/
 
