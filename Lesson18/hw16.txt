@@ -1,0 +1,23 @@
+–азработать базу данных в mysql дл€ ведени€ списка дел (ToDo)
+¬ базе данных должны находитьс€ таблицы:
+	ToDoList с пол€ми:
+		id (int), 
+                short_description (varchar(255)), 
+                long_description (text), 
+                category_id (foreign key), 
+		created (timestamp),
+                start (date),
+	        end (date),
+                status_id (int)
+        Categories с пол€ми:
+                id (int),
+                name (varchar(255))
+	Status 
+                id (int)
+                name (varchar(255))
+                
+–азработать приложение на java дл€ ведени€ списка дел.
+¬ программе предусмотреть возможности:
+    1. ¬ывод всех записей таблицы ToDoList
+    2. ƒобавление новой записи в таблицы ToDoList и Categories
+    3. ”даление записей из таблиц ToDoList и Categories по id, а из ToDoList и по завершенности
