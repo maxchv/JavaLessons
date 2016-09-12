@@ -1,50 +1,40 @@
 package ua.dp.itstep.shaptala;
 
+import java.sql.SQLException;
+
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;
 
+import ua.dp.itstep.shaptala.dao.StudentDao;
+import ua.dp.itstep.shaptala.general.Factory;
+import ua.dp.itstep.shaptala.model.Student;
+import ua.dp.itstep.shaptala.util.HibernateUtil;
+
 public class Main {
 
-	public static void main(String[] args) {
-		Configuration configuration =
-				new Configuration()
-				.addAnnotatedClass(Student.class)
-				.configure();
+	public static void main(String[] args) throws SQLException {
 		
-		
-		StandardServiceRegistryBuilder builder = 
-				new StandardServiceRegistryBuilder()
-				.applySettings(configuration.getProperties());
-		
-		SessionFactory sessionFactory = configuration
-				.buildSessionFactory(builder.build());
-		
-		Session session = sessionFactory.openSession();
-		
+		StudentDao studentDao = new Factory().getBookDao();
 		
 		Student s = new Student();
-		
 		s.setName("Jhon");
 		s.setAge(26);
 		
-		session.beginTransaction();
+		studentDao.addStudent(s);
 		
-		session.save(s);
-		session.getTransaction().commit();
+		s = studentDao.getStudent(3);
+		System.out.println(s);
+		if(s != null) {
+			System.out.println("delete student by id: " + s.getId());
+			studentDao.deleteStudent(s);
+		}
 		
-		System.out.println("id: " + s.getId());
-		
-		session.createQuery("from Student")
-		       .stream()
-		       .forEach(i -> System.out.println(i));
+		studentDao.getAllStudents()
+		       .forEach(student -> 
+		       			System.out.format("%d | %s | %d\n", student.getId(), student.getName(), student.getAge()));
 				
-		Student student = session.load(Student.class, 2);
-		System.out.println(student);
-		session.beginTransaction();
-		session.delete(student);
-		session.getTransaction().commit();
-		session.close();
+		HibernateUtil.closeSession();
 	}
 }
