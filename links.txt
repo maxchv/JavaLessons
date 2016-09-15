@@ -12,6 +12,9 @@ https://www3.ntu.edu.sg/home/ehchua/programming/howto/Tomcat_HowTo.html
 Пример программ на swing
 http://java-swing-tips.blogspot.com/
 
+JPA Tutorials
+http://www.objectdb.com//tutorial
+
 Как создать Servlet? Полное руководство
 http://devcolibri.com/4284
 
