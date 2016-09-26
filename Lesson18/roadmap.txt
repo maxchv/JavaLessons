@@ -1,0 +1,103 @@
+Create hibernate project in eclipse
+
+1. Create Maven project
+2. Add to pom.xml
+
+		<!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-core -->
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-core</artifactId>
+			<version>5.2.2.Final</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-entitymanager -->
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-entitymanager</artifactId>
+			<version>5.2.2.Final</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
+		<dependency>
+			<groupId>org.hibernate.javax.persistence</groupId>
+			<artifactId>hibernate-jpa-2.0-api</artifactId>
+			<version>1.0.0.Final</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>5.1.39</version>
+		</dependency>
+
+3. Install Hibernate tools http://download.jboss.org/jbosstools/updates/development/indigo
+
+4. Convert to JPA project...
+
+5. Window -> Preferences -> Validation, JPA Validator, turn off for Build.
+
+6. Add preferances to persistence.xml
+
+		<properties>
+			<property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/shop" />
+			<property name="javax.persistence.jdbc.user" value="root" />
+			<property name="javax.persistence.jdbc.password" value="???" />
+			<property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver" />
+
+			<property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect"></property>
+
+			<!-- Echo all executed SQL to stdout -->
+			<property name = "hibernate.show_sql" value = "true" />
+			<property name="hibernate.format_sql" value="true"/>
+			<property name="hibernate.hbm2ddl.auto" value="update"></property>
+		</properties>		
+
+7. Create Entity
+
+8. Create EntityManager:
+
+EntityManager em = Persistence.createEntityManagerFactory("HibernateDemo").createEntityManager(); 
+
+9. Begin transaction
+
+em.em.getTransaction().begin();
+
+10. End transaction
+
+em.getTransaction().commit();
+
+11. Create
+em.persist(user);
+
+12. Select
+em.find(User.class, 1)
+
+SelectAll 
+
+List<User>lst = em.createQuery("SELECT u FROM User u", User.class).getResultList();
+
+or
+
+List<User>lst = em.createQuery("FROM User", User.class).getResultList();
+
+13. Delete
+em.remove(user)
+
+14. Update
+em.merge(user)
+
+15. Using pattern DAO
+
+Create class entity utils
+
+Create interface DAO with methods:
+
+	- create
+	- delete
+	- findById
+	- update
+	- getAll
+	
+Create implement DAO
+
+Create Factory class (singleton) with method getUserDao
+	
