@@ -21,6 +21,7 @@ http://devcolibri.com/4284
 Run Bash on Ubuntu on Windows
 https://blogs.windows.com/buildingapps/2016/03/30/run-bash-on-ubuntu-on-windows/
 
-
 Sevlets
 http://tutorials.jenkov.com/java-servlets/servletcontext.html
+https://www.ntu.edu.sg/home/ehchua/programming/java/JavaServlets.html
+UploadFiles: https://www.ntu.edu.sg/home/ehchua/programming/java/JavaServletCaseStudyPart2.html#FileUpload
