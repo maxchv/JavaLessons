@@ -9,8 +9,10 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import ua.dp.itstep.dao.PostService;
 import ua.dp.itstep.domain.Post;
@@ -50,6 +52,12 @@ public class HomeController {
 		model.addAttribute("serverTime", formattedDate );
 		
 		return "home";
+	}
+	
+	@RequestMapping("/{resourceId}")
+	@ResponseBody
+	public Post findResource(@PathVariable("resourceId") Long resourceId) {
+		return repository.findOne(resourceId);		
 	}
 	
 }

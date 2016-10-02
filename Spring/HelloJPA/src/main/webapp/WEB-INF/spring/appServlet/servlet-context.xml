@@ -54,12 +54,12 @@
 	</beans:bean>
 
 	<!-- Add Transaction support -->
-	<beans:bean id="myTxManager" class="org.springframework.orm.jpa.JpaTransactionManager" primary="false">
+	<beans:bean id="transactionManager" class="org.springframework.orm.jpa.JpaTransactionManager" primary="false">
 		<beans:property name="entityManagerFactory" ref="entityManagerFactory" />
 	</beans:bean>
 
 	<!-- Use @Transaction annotations for managing transactions -->
-	<tx:annotation-driven transaction-manager="myTxManager" />
+	<tx:annotation-driven transaction-manager="transactionManager" />
 	
 	<jpa:repositories base-package="ua.dp.itstep" />
 	
