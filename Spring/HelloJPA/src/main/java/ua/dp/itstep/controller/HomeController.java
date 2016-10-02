@@ -1,4 +1,4 @@
-package ua.dp.itstep;
+package ua.dp.itstep.controller;
 
 import java.text.DateFormat;
 import java.util.Date;
@@ -26,8 +26,8 @@ public class HomeController {
 	
 	private static final Logger logger = LoggerFactory.getLogger(HomeController.class);
 	
-	@Autowired
-	PostService postService;
+	//@Autowired
+	//PostService postService;
 	
 	@Autowired
 	private PostRepository repository;
@@ -38,18 +38,9 @@ public class HomeController {
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public String home(Locale locale, Model model) {
 		logger.info("Welcome home! The client locale is {}.", locale);
+				
 		
-		Date date = new Date();
-		DateFormat dateFormat = DateFormat.getDateTimeInstance(DateFormat.LONG, DateFormat.LONG, locale);
-		
-		Post post = new Post("title", "text post");
-//		postService.save(post);
-		
-		postService.save(post);
-		
-		String formattedDate = dateFormat.format(date);
-		
-		model.addAttribute("serverTime", formattedDate );
+		model.addAttribute("posts", repository.findAll());
 		
 		return "home";
 	}
@@ -57,6 +48,7 @@ public class HomeController {
 	@RequestMapping("/{resourceId}")
 	@ResponseBody
 	public Post findResource(@PathVariable("resourceId") Long resourceId) {
+		logger.info("Get post for id = " + resourceId);
 		return repository.findOne(resourceId);		
 	}
 	

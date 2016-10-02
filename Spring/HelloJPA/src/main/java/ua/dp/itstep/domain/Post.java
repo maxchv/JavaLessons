@@ -6,6 +6,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
+import org.springframework.beans.factory.annotation.Required;
+
 @Entity
 public class Post implements Serializable {
 	
@@ -15,8 +17,9 @@ public class Post implements Serializable {
 	private static final long serialVersionUID = -3112268794487544729L;
 	
 	
-	@Id @GeneratedValue 
-	private Long id;	
+	@Id @GeneratedValue
+	private Long id;
+	
 	private String title;
 	private String text;
 	
@@ -44,4 +47,11 @@ public class Post implements Serializable {
 	public Long getId() {
 		return id;
 	}
+
+	@Override
+	public String toString() {
+		return "Post [id=" + id + ", title=" + title + ", text=" + text + "]";
+	}
+	
+	
 }
