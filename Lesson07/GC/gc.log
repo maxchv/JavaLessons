@@ -1,4 +1,21 @@
-Java HotSpot(TM) 64-Bit Server VM (25.91-b14) for windows-amd64 JRE (1.8.0_91-b14), built on Apr  1 2016 00:58:32 by "java_re" with MS VC++ 10.0 (VS2010)
-Memory: 4k page, physical 16564076k(8700404k free), swap 19054444k(9690228k free)
-CommandLine flags: -XX:InitialHeapSize=536870912 -XX:MaxHeapSize=536870912 -XX:NewRatio=3 -XX:+PrintGC -XX:+PrintGCDetails -XX:+PrintGCTimeStamps -XX:+UseCompressedClassPointers -XX:+UseCompressedOops -XX:-UseLargePagesIndividualAllocation -XX:+UseParallelGC 
-113.360: [GC (Allocation Failure) [PSYoungGen: 98304K->16368K(114688K)] 98304K->43208K(507904K), 0.0373500 secs] [Times: user=0.00 sys=0.03, real=0.04 secs] 
+Java HotSpot(TM) Client VM (25.112-b15) for windows-x86 JRE (1.8.0_112-b15), built on Sep 22 2016 21:03:20 by "java_re" with MS VC++ 10.0 (VS2010)
+Memory: 4k page, physical 3013924k(368508k free), swap 5111076k(1988300k free)
+CommandLine flags: -XX:InitialHeapSize=536870912 -XX:MaxHeapSize=536870912 -XX:NewRatio=3 -XX:+PrintGC -XX:+PrintGCDetails -XX:+PrintGCTimeStamps -XX:-UseLargePagesIndividualAllocation 
+67.237: [Full GC (System.gc()) 67.237: [Tenured: 0K->22204K(393216K), 0.0726989 secs] 86631K->22204K(511232K), [Metaspace: 5620K->5620K(6528K)], 0.0864222 secs] [Times: user=0.03 sys=0.02, real=0.09 secs] 
+97.521: [GC (Allocation Failure) 97.521: [DefNew: 99354K->10287K(118016K), 0.2225393 secs] 121559K->114412K(511232K), 0.2227002 secs] [Times: user=0.09 sys=0.06, real=0.22 secs] 
+108.769: [GC (Allocation Failure) 108.769: [DefNew: 106462K->10256K(118016K), 0.2294108 secs] 210587K->206589K(511232K), 0.2295990 secs] [Times: user=0.08 sys=0.09, real=0.23 secs] 
+116.890: [GC (Allocation Failure) 116.890: [DefNew: 106440K->10252K(118016K), 0.1923947 secs] 302773K->298761K(511232K), 0.1925211 secs] [Times: user=0.08 sys=0.06, real=0.19 secs] 
+129.031: [GC (Allocation Failure) 129.031: [DefNew: 107846K->10277K(118016K), 0.1624573 secs] 396356K->380719K(511232K), 0.1628359 secs] [Times: user=0.11 sys=0.03, real=0.16 secs] 
+141.737: [GC (Allocation Failure) 141.737: [DefNew: 106214K->106214K(118016K), 0.0000280 secs]141.737: [Tenured: 370441K->390894K(393216K), 0.2842967 secs] 476656K->421633K(511232K), [Metaspace: 5620K->5620K(6528K)], 0.2845490 secs] [Times: user=0.22 sys=0.00, real=0.29 secs] 
+157.832: [Full GC (Allocation Failure) 157.832: [Tenured: 390894K->390894K(393216K), 0.1478687 secs] 497456K->493314K(511232K), [Metaspace: 5620K->5620K(6528K)], 0.1483514 secs] [Times: user=0.05 sys=0.00, real=0.15 secs] 
+159.651: [Full GC (Allocation Failure) 159.651: [Tenured: 390894K->390517K(393216K), 0.6479198 secs] 505736K->492936K(511232K), [Metaspace: 5584K->5584K(6528K)], 0.6481874 secs] [Times: user=0.53 sys=0.00, real=0.65 secs] 
+161.805: [Full GC (Allocation Failure) 161.805: [Tenured: 390517K->390517K(393216K), 0.0288227 secs] 504758K->503177K(511232K), [Metaspace: 5585K->5585K(6528K)], 0.0289585 secs] [Times: user=0.03 sys=0.00, real=0.03 secs] 
+161.834: [Full GC (Allocation Failure) 161.834: [Tenured: 390517K->390486K(393216K), 0.3362789 secs] 503177K->503147K(511232K), [Metaspace: 5585K->5585K(6528K)], 0.3364460 secs] [Times: user=0.31 sys=0.00, real=0.34 secs] 
+Heap
+ def new generation   total 118016K, used 114604K [0x03a00000, 0x0ba00000, 0x0ba00000)
+  eden space 104960K,  99% used [0x03a00000, 0x09feb248, 0x0a080000)
+  from space 13056K,  78% used [0x0a080000, 0x0aa80010, 0x0ad40000)
+  to   space 13056K,   0% used [0x0ad40000, 0x0ad40000, 0x0ba00000)
+ tenured generation   total 393216K, used 390486K [0x0ba00000, 0x23a00000, 0x23a00000)
+   the space 393216K,  99% used [0x0ba00000, 0x23755a38, 0x23755c00, 0x23a00000)
+ Metaspace       used 5552K, capacity 5760K, committed 5888K, reserved 6528K

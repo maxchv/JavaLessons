@@ -55,10 +55,10 @@ public class Application {
     private static Scanner in = new Scanner(System.in);
 
     /**
-     * По умолчанию - создание объекта размером 1 Мб
+     * По умолчанию - создание объекта размером 10 Мб
      */
     private static void createObjects() {
-        createObjects(1);
+        createObjects(10);
     }
 
     /**

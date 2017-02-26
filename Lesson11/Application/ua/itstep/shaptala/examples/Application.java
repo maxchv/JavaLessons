@@ -12,7 +12,6 @@ import java.util.TreeMap;
 
 public class Application {
 
-	
 	static class BenchmarkList {
 		static int from = 1000;
 		static int to   = 100000;
