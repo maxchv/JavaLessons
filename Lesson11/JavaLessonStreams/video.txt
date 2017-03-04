@@ -1,0 +1,52 @@
+18.07.2016
+----------
+
+Introduction	https://youtu.be/UY7a4Br40sU
+StartJava	https://youtu.be/8gGJgvXeR7Y
+
+19.07.2016
+----------
+
+Strings		https://youtu.be/25tE6sRkFm0
+
+20.07.2016
+----------
+
+Arrays		https://youtu.be/E1HHKRS7S40
+
+21.07.2016
+----------
+
+Incapsulation	https://youtu.be/6hPjczM3iFY
+Nasted classes  https://youtu.be/06QvfhdThxY
+
+15.08.2016
+----------
+
+Enums		https://youtu.be/exMtNouerbs
+Finals		https://youtu.be/xsruV4VxGd0
+GC		https://youtu.be/FYHquTMwYlQ
+
+16.08.2016
+----------
+
+Exceptions	https://youtu.be/T5ffTGw8a6A
+Generics	https://youtu.be/vGujTeD60ys
+
+17.08.2016
+----------
+
+Collections	https://youtu.be/T2-ZoE35Bj4
+LinkedList vs ArrayList https://youtu.be/4ZRDkAU4U88
+
+18.08.2016
+----------
+
+Sets		https://youtu.be/mnKA3SkkDr4
+Maps		https://youtu.be/6qJ_2dF0sqU
+
+22.08.2016
+----------
+
+Collection Streams	https://youtu.be/UaUbwSi4Cwg
+Compare streams		https://youtu.be/ggsGLDi_SaE
