@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="82a7e008-f12b-481b-be62-c24ed1b2d53a" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/bin/" />
+    <ignored path=".idea/dataSources.local.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -14,34 +15,31 @@
     <option name="PATCH_PATH" value="" />
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="JavaLesson09" />
+  </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="StreamsDemo.java" pinned="false" current-in-tab="false">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="StreamsDemo.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/ua/itstep/shaptala/StreamsDemo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1904">
-              <caret line="241" column="61" lean-forward="false" selection-start-line="241" selection-start-column="61" selection-end-line="241" selection-end-column="61" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="StreamExcersice.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/ua/itstep/shaptala/StreamExcersice.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2045">
-              <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Dish.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ua/itstep/shaptala/Dish.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="80">
-              <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-              <folding />
+            <state relative-caret-position="45">
+              <caret line="284" column="51" selection-start-line="284" selection-start-column="51" selection-end-line="284" selection-end-column="51" />
+              <folding>
+                <element signature="e#223#224#0" expanded="true" />
+                <element signature="e#262#263#0" expanded="true" />
+                <element signature="e#1640#1671#0" expanded="false" />
+                <element signature="e#2319#2359#0" expanded="false" />
+                <element signature="e#3095#3165#0" expanded="false" />
+                <element signature="e#3841#3898#0" expanded="false" />
+                <element signature="e#4465#4513#0" expanded="false" />
+                <element signature="e#4837#4885#0" expanded="false" />
+                <element signature="e#5678#5709#0" expanded="false" />
+                <element signature="e#5955#6003#0" expanded="false" />
+                <element signature="e#6931#6960#0" expanded="false" />
+                <element signature="e#7494#7516#0" expanded="false" />
+                <marker date="1488722122980" expanded="true" signature="421:511" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -74,8 +72,18 @@
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1296" />
-    <option name="height" value="1000" />
+    <option name="width" value="1376" />
+    <option name="height" value="744" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -93,10 +101,15 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JavaLesson09" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
           <PATH>
             <PATH_ELEMENT>
               <option name="myItemId" value="JavaLesson09" />
@@ -127,6 +140,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -164,7 +178,7 @@
       <predefined_log_file id="idea.log" enabled="true" />
       <method />
     </configuration>
-    <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android App">
+    <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
       <module name="" />
       <option name="DEPLOY" value="true" />
       <option name="ARTIFACT_NAME" value="" />
@@ -174,7 +188,7 @@
       <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
       <option name="PREFERRED_AVD" value="" />
       <option name="CLEAR_LOGCAT" value="false" />
-      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
       <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
       <option name="FORCE_STOP_RUNNING_APP" value="true" />
       <option name="DEBUGGER_TYPE" value="Java" />
@@ -182,11 +196,7 @@
       <option name="PREFERRED_AVD" value="" />
       <Java />
       <Profilers>
-        <option name="ENABLE_ADVANCED_PROFILING" value="true" />
-        <option name="GAPID_ENABLED" value="false" />
         <option name="GAPID_DISABLE_PCS" value="false" />
-        <option name="SUPPORT_LIB_ENABLED" value="true" />
-        <option name="INSTRUMENTATION_ENABLED" value="true" />
       </Profilers>
       <option name="DEEP_LINK" value="" />
       <option name="ACTIVITY_CLASS" value="" />
@@ -211,11 +221,7 @@
       <option name="PREFERRED_AVD" value="" />
       <Java />
       <Profilers>
-        <option name="ENABLE_ADVANCED_PROFILING" value="true" />
-        <option name="GAPID_ENABLED" value="false" />
         <option name="GAPID_DISABLE_PCS" value="false" />
-        <option name="SUPPORT_LIB_ENABLED" value="true" />
-        <option name="INSTRUMENTATION_ENABLED" value="true" />
       </Profilers>
       <method />
     </configuration>
@@ -240,78 +246,6 @@
       <option name="PASS_PARENT_ENVS" value="true" />
       <module name="" />
       <envs />
-      <method />
-    </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="" />
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
-    <configuration default="true" type="ArquillianTestNG" factoryName="">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="" />
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="SUITE_NAME" />
-      <option name="PACKAGE_NAME" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="GROUP_NAME" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <option name="VM_PARAMETERS" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" />
-      <option name="OUTPUT_DIRECTORY" />
-      <option name="ANNOTATION_TYPE" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <option name="USE_DEFAULT_REPORTERS" value="false" />
-      <option name="PROPERTIES_FILE" />
-      <envs />
-      <properties />
-      <listeners />
-      <method />
-    </configuration>
-    <configuration default="true" type="BatchConfigurationType" factoryName="Batch">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <module name="" />
-      <option name="SCRIPT_NAME" value="" />
-      <option name="PARAMETERS" value="" />
-      <method />
-    </configuration>
-    <configuration default="true" type="Cold Fusion runner description" factoryName="Cold Fusion" custom_browser="" web_path="">
       <method />
     </configuration>
     <configuration default="true" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java">
@@ -398,14 +332,6 @@
       </ExternalSystemSettings>
       <method />
     </configuration>
-    <configuration default="true" type="GrailsRunConfigurationType" factoryName="Grails">
-      <setting name="vmparams" value="" />
-      <setting name="cmdLine" value="run-app" />
-      <setting name="passParentEnv" value="true" />
-      <setting name="launchBrowser" value="true" />
-      <setting name="launchBrowserUrl" value="" />
-      <method />
-    </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
@@ -418,6 +344,27 @@
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="true" type="JUnitTestDiscovery" factoryName="JUnit Test Discovery" changeList="All">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
       <option name="ENV_VARIABLES" />
       <option name="PASS_PARENT_ENVS" value="true" />
       <option name="TEST_SEARCH_SCOPE">
@@ -445,12 +392,6 @@
       <option name="ENV_VARIABLES" />
       <option name="PASS_PARENT_ENVS" value="true" />
       <module name="" />
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="true" type="JavaScriptTestRunnerProtractor" factoryName="Protractor">
-      <config-file value="" />
-      <node-interpreter value="project" />
       <envs />
       <method />
     </configuration>
@@ -482,49 +423,12 @@
       <envs />
       <method />
     </configuration>
-    <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" path-to-node="project" working-dir="">
-      <method />
-    </configuration>
     <configuration default="true" type="Remote" factoryName="Remote">
       <option name="USE_SOCKET_TRANSPORT" value="true" />
       <option name="SERVER_MODE" value="false" />
       <option name="SHMEM_ADDRESS" value="javadebug" />
       <option name="HOST" value="localhost" />
       <option name="PORT" value="5005" />
-      <method />
-    </configuration>
-    <configuration default="true" type="ScalaTestRunConfiguration" factoryName="ScalaTest">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="" />
-      <setting name="path" value="" />
-      <setting name="package" value="" />
-      <setting name="vmparams" value="" />
-      <setting name="params" value="" />
-      <setting name="workingDirectory" value="" />
-      <setting name="searchForTest" value="Across module dependencies" />
-      <setting name="testName" value="" />
-      <setting name="testKind" value="Class" />
-      <setting name="showProgressMessages" value="true" />
-      <classRegexps />
-      <testRegexps />
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="true" type="Specs2RunConfiguration" factoryName="Specs2">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="" />
-      <setting name="path" value="" />
-      <setting name="package" value="" />
-      <setting name="vmparams" value="" />
-      <setting name="params" value="" />
-      <setting name="workingDirectory" value="" />
-      <setting name="searchForTest" value="Across module dependencies" />
-      <setting name="testName" value="" />
-      <setting name="testKind" value="Class" />
-      <setting name="showProgressMessages" value="true" />
-      <classRegexps />
-      <testRegexps />
-      <envs />
       <method />
     </configuration>
     <configuration default="true" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
@@ -561,50 +465,54 @@
       <listeners />
       <method />
     </configuration>
+    <configuration default="true" type="TestNGTestDiscovery" factoryName="TestNG Test Discovery" changeList="All">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
+      <method />
+    </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.npm" factoryName="npm">
-      <command value="run" />
+      <command value="run-script" />
       <scripts />
       <node-interpreter value="project" />
       <envs />
-      <method />
-    </configuration>
-    <configuration default="true" type="mocha-javascript-test-runner" factoryName="Mocha">
-      <node-interpreter>project</node-interpreter>
-      <node-options />
-      <working-directory />
-      <pass-parent-env>true</pass-parent-env>
-      <envs />
-      <ui />
-      <extra-mocha-options />
-      <test-kind>DIRECTORY</test-kind>
-      <test-directory />
-      <recursive>false</recursive>
       <method />
     </configuration>
     <configuration default="true" type="osgi.bnd.run" factoryName="Run Launcher">
       <method />
     </configuration>
     <configuration default="true" type="osgi.bnd.run" factoryName="Test Launcher (JUnit)">
-      <method />
-    </configuration>
-    <configuration default="true" type="uTestRunConfiguration" factoryName="utest">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="" />
-      <setting name="path" value="" />
-      <setting name="package" value="" />
-      <setting name="vmparams" value="" />
-      <setting name="params" value="" />
-      <setting name="workingDirectory" value="" />
-      <setting name="searchForTest" value="Across module dependencies" />
-      <setting name="testName" value="" />
-      <setting name="testKind" value="Class" />
-      <setting name="showProgressMessages" value="true" />
-      <classRegexps />
-      <testRegexps />
-      <envs />
       <method />
     </configuration>
     <list size="1">
@@ -615,6 +523,34 @@
         <item index="0" class="java.lang.String" itemvalue="Application.StreamsDemo" />
       </list>
     </recent_temporary>
+    <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android App">
+      <module name="" />
+      <option name="DEPLOY" value="true" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="PM_INSTALL_OPTIONS" value="" />
+      <option name="ACTIVITY_EXTRA_FLAGS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
+      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
+      <option name="FORCE_STOP_RUNNING_APP" value="true" />
+      <option name="DEBUGGER_TYPE" value="Java" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <Java />
+      <Profilers>
+        <option name="ENABLE_ADVANCED_PROFILING" value="true" />
+        <option name="GAPID_ENABLED" value="false" />
+        <option name="GAPID_DISABLE_PCS" value="false" />
+        <option name="SUPPORT_LIB_ENABLED" value="true" />
+        <option name="INSTRUMENTATION_ENABLED" value="true" />
+      </Profilers>
+      <option name="DEEP_LINK" value="" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <method />
+    </configuration>
   </component>
   <component name="SbtLocalSettings">
     <option name="externalProjectsViewState">
@@ -632,55 +568,75 @@
       <option name="presentableId" value="Default" />
       <updated>1488663222234</updated>
       <workItem from="1488663239384" duration="4456000" />
+      <workItem from="1488700397107" duration="5803000" />
+      <workItem from="1488714170916" duration="6460000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4456000" />
+    <option name="totallyTimeSpent" value="16719000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1296" height="1000" extended-state="6" />
+    <frame x="-8" y="-8" width="1376" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3091119" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.12783171" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19085173" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17352942" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="processedProjectFiles" value="true" />
   </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+      <collection />
+    </option>
+  </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/ua/itstep/shaptala/StreamsDemo.java</url>
+          <line>183</line>
+          <properties />
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="2" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="antWorkspaceConfiguration">
@@ -688,43 +644,404 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_91/src.zip!/java/util/stream/Stream.java">
+    <entry file="file://$PROJECT_DIR$/src/ua/itstep/shaptala/StreamsDemo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="640">
-          <caret line="606" column="6" lean-forward="false" selection-start-line="606" selection-start-column="6" selection-end-line="606" selection-end-column="6" />
-          <folding />
+        <state relative-caret-position="2091">
+          <caret line="269" column="33" selection-start-line="269" selection-start-column="33" selection-end-line="269" selection-end-column="33" />
+          <folding>
+            <element signature="e#223#224#0" expanded="true" />
+            <element signature="e#262#263#0" expanded="true" />
+            <element signature="e#1640#1671#0" expanded="false" />
+            <element signature="e#2319#2359#0" expanded="false" />
+            <element signature="e#3095#3165#0" expanded="false" />
+            <element signature="e#3841#3898#0" expanded="false" />
+            <element signature="e#4465#4513#0" expanded="false" />
+            <element signature="e#4837#4885#0" expanded="false" />
+            <element signature="e#5678#5709#0" expanded="false" />
+            <element signature="e#5955#6003#0" expanded="false" />
+            <element signature="e#6931#6960#0" expanded="false" />
+            <element signature="e#7494#7516#0" expanded="false" />
+            <marker date="1488722122980" expanded="true" signature="421:511" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_91/src.zip!/java/util/function/ToIntFunction.java">
+    <entry file="file://$PROJECT_DIR$/src/ua/itstep/shaptala/StreamExcersice.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="47" column="8" lean-forward="false" selection-start-line="47" selection-start-column="8" selection-end-line="47" selection-end-column="8" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ua/itstep/shaptala/StreamsDemo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1904">
-          <caret line="241" column="61" lean-forward="false" selection-start-line="241" selection-start-column="61" selection-end-line="241" selection-end-column="61" />
+        <state relative-caret-position="3910">
+          <caret line="241" column="61" selection-start-line="241" selection-start-column="61" selection-end-line="241" selection-end-column="61" />
+          <folding>
+            <element signature="e#223#224#0" expanded="true" />
+            <element signature="e#262#263#0" expanded="true" />
+            <element signature="e#1640#1671#0" expanded="false" />
+            <element signature="e#2319#2359#0" expanded="false" />
+            <element signature="e#3095#3165#0" expanded="false" />
+            <element signature="e#3841#3898#0" expanded="false" />
+            <element signature="e#4465#4513#0" expanded="false" />
+            <element signature="e#4837#4885#0" expanded="false" />
+            <element signature="e#5678#5709#0" expanded="false" />
+            <element signature="e#5955#6003#0" expanded="false" />
+            <element signature="e#6931#6960#0" expanded="false" />
+            <element signature="e#7494#7516#0" expanded="false" />
+            <marker date="1488722122980" expanded="true" signature="421:511" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ua/itstep/shaptala/StreamExcersice.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ua/itstep/shaptala/Dish.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        <state relative-caret-position="68">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_91/src.zip!/java/util/stream/Stream.java" />
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_91/src.zip!/java/util/function/ToIntFunction.java" />
+    <entry file="file://$PROJECT_DIR$/src/ua/itstep/shaptala/Dish.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_112/src.zip!/java/util/List.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-99">
+          <caret line="110" column="17" selection-start-line="110" selection-start-column="17" selection-end-line="110" selection-end-column="17" />
+          <folding>
+            <element signature="docComment;class#List#0" expanded="false" />
+            <element signature="docComment;method#size#0;class#List#0" expanded="false" />
+            <element signature="docComment;method#isEmpty#0;class#List#0" expanded="false" />
+            <element signature="docComment;method#contains#0;class#List#0" expanded="false" />
+            <element signature="docComment;method#iterator#0;class#List#0" expanded="false" />
+            <element signature="docComment;method#toArray#0;class#List#0" expanded="false" />
+            <element signature="docComment;method#toArray#1;class#List#0" expanded="false" />
+            <element signature="docComment;method#add#0;class#List#0" expanded="false" />
+            <element signature="docComment;method#remove#0;class#List#0" expanded="false" />
+            <element signature="docComment;method#containsAll#0;class#List#0" expanded="false" />
+            <element signature="docComment;method#addAll#0;class#List#0" expanded="false" />
+            <element signature="docComment;method#addAll#1;class#List#0" expanded="false" />
+            <element signature="docComment;method#removeAll#0;class#List#0" expanded="false" />
+            <element signature="docComment;method#retainAll#0;class#List#0" expanded="false" />
+            <element signature="docComment;method#replaceAll#0;class#List#0" expanded="false" />
+            <element signature="method#replaceAll#0;class#List#0" expanded="false" />
+            <element signature="docComment;method#sort#0;class#List#0" expanded="false" />
+            <element signature="method#sort#0;class#List#0" expanded="false" />
+            <element signature="docComment;method#clear#0;class#List#0" expanded="false" />
+            <element signature="docComment;method#equals#0;class#List#0" expanded="false" />
+            <element signature="docComment;method#hashCode#0;class#List#0" expanded="false" />
+            <element signature="docComment;method#get#0;class#List#0" expanded="false" />
+            <element signature="docComment;method#set#0;class#List#0" expanded="false" />
+            <element signature="docComment;method#add#1;class#List#0" expanded="false" />
+            <element signature="docComment;method#remove#1;class#List#0" expanded="false" />
+            <element signature="docComment;method#indexOf#0;class#List#0" expanded="false" />
+            <element signature="docComment;method#lastIndexOf#0;class#List#0" expanded="false" />
+            <element signature="docComment;method#listIterator#0;class#List#0" expanded="false" />
+            <element signature="docComment;method#listIterator#1;class#List#0" expanded="false" />
+            <element signature="docComment;method#subList#0;class#List#0" expanded="false" />
+            <element signature="docComment;method#spliterator#0;class#List#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_112/src.zip!/java/util/Collection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="579" column="22" selection-start-line="579" selection-start-column="22" selection-end-line="579" selection-end-column="22" />
+          <folding>
+            <element signature="e#26957#26958#0" expanded="false" />
+            <element signature="e#27022#27023#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_112/src.zip!/java/util/stream/Collectors.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="229" column="74" selection-start-line="229" selection-start-column="74" selection-end-line="229" selection-end-column="74" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_112/src.zip!/java/lang/Integer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="738" column="21" selection-start-line="738" selection-start-column="21" selection-end-line="738" selection-end-column="21" />
+          <folding>
+            <element signature="docComment;class#Integer#0" expanded="false" />
+            <element signature="docComment;field#MIN_VALUE#0;class#Integer#0" expanded="false" />
+            <element signature="docComment;field#MAX_VALUE#0;class#Integer#0" expanded="false" />
+            <element signature="docComment;field#TYPE#0;class#Integer#0" expanded="false" />
+            <element signature="docComment;field#digits#0;class#Integer#0" expanded="false" />
+            <element signature="docComment;method#toString#0;class#Integer#0" expanded="false" />
+            <element signature="method#toString#0;class#Integer#0" expanded="false" />
+            <element signature="docComment;method#toUnsignedString#0;class#Integer#0" expanded="false" />
+            <element signature="docComment;method#toHexString#0;class#Integer#0" expanded="false" />
+            <element signature="docComment;method#toOctalString#0;class#Integer#0" expanded="false" />
+            <element signature="docComment;method#toBinaryString#0;class#Integer#0" expanded="false" />
+            <element signature="docComment;method#toUnsignedString0#0;class#Integer#0" expanded="false" />
+            <element signature="method#toUnsignedString0#0;class#Integer#0" expanded="false" />
+            <element signature="docComment;method#formatUnsignedInt#0;class#Integer#0" expanded="false" />
+            <element signature="method#formatUnsignedInt#0;class#Integer#0" expanded="false" />
+            <element signature="e#13557#13617#0" expanded="false" />
+            <element signature="docComment;method#toString#1;class#Integer#0" expanded="false" />
+            <element signature="method#toString#1;class#Integer#0" expanded="false" />
+            <element signature="docComment;method#toUnsignedString#1;class#Integer#0" expanded="false" />
+            <element signature="docComment;method#getChars#0;class#Integer#0" expanded="false" />
+            <element signature="method#getChars#0;class#Integer#0" expanded="false" />
+            <element signature="e#16643#16688#0" expanded="false" />
+            <element signature="method#stringSize#0;class#Integer#0" expanded="false" />
+            <element signature="docComment;method#parseInt#0;class#Integer#0" expanded="false" />
+            <element signature="method#parseInt#0;class#Integer#0" expanded="false" />
+            <element signature="docComment;method#parseInt#1;class#Integer#0" expanded="false" />
+            <element signature="method#parseInt#1;class#Integer#0" expanded="false" />
+            <element signature="docComment;method#parseUnsignedInt#0;class#Integer#0" expanded="false" />
+            <element signature="method#parseUnsignedInt#0;class#Integer#0" expanded="false" />
+            <element signature="docComment;method#parseUnsignedInt#1;class#Integer#0" expanded="false" />
+            <element signature="method#parseUnsignedInt#1;class#Integer#0" expanded="false" />
+            <element signature="docComment;method#valueOf#0;class#Integer#0" expanded="false" />
+            <element signature="method#valueOf#0;class#Integer#0" expanded="false" />
+            <element signature="docComment;method#valueOf#1;class#Integer#0" expanded="false" />
+            <element signature="method#valueOf#1;class#Integer#0" expanded="false" />
+            <element signature="docComment;class#IntegerCache#0;class#Integer#0" expanded="false" />
+            <element signature="class#IntegerCache#0;class#Integer#0" expanded="false" />
+            <element signature="initializer##0;class#IntegerCache#0;class#Integer#0" expanded="false" />
+            <element signature="docComment;method#valueOf#2;class#Integer#0" expanded="false" />
+            <element signature="method#valueOf#2;class#Integer#0" expanded="false" />
+            <element signature="docComment;field#value#0;class#Integer#0" expanded="false" />
+            <element signature="docComment;method#Integer#0;class#Integer#0" expanded="false" />
+            <element signature="docComment;method#Integer#1;class#Integer#0" expanded="false" />
+            <element signature="method#Integer#1;class#Integer#0" expanded="false" />
+            <element signature="docComment;method#byteValue#0;class#Integer#0" expanded="false" />
+            <element signature="docComment;method#shortValue#0;class#Integer#0" expanded="false" />
+            <element signature="docComment;method#intValue#0;class#Integer#0" expanded="false" />
+            <element signature="docComment;method#longValue#0;class#Integer#0" expanded="false" />
+            <element signature="docComment;method#floatValue#0;class#Integer#0" expanded="false" />
+            <element signature="docComment;method#doubleValue#0;class#Integer#0" expanded="false" />
+            <element signature="docComment;method#toString#2;class#Integer#0" expanded="false" />
+            <element signature="docComment;method#hashCode#0;class#Integer#0" expanded="false" />
+            <element signature="docComment;method#hashCode#1;class#Integer#0" expanded="false" />
+            <element signature="docComment;method#equals#0;class#Integer#0" expanded="false" />
+            <element signature="method#equals#0;class#Integer#0" expanded="false" />
+            <element signature="docComment;method#getInteger#0;class#Integer#0" expanded="false" />
+            <element signature="docComment;method#getInteger#1;class#Integer#0" expanded="false" />
+            <element signature="method#getInteger#1;class#Integer#0" expanded="false" />
+            <element signature="docComment;method#getInteger#2;class#Integer#0" expanded="false" />
+            <element signature="method#getInteger#2;class#Integer#0" expanded="false" />
+            <element signature="docComment;method#decode#0;class#Integer#0" expanded="false" />
+            <element signature="method#decode#0;class#Integer#0" expanded="false" />
+            <element signature="e#45337#45404#0" expanded="false" />
+            <element signature="docComment;method#compareTo#0;class#Integer#0" expanded="false" />
+            <element signature="docComment;method#compare#0;class#Integer#0" expanded="false" />
+            <element signature="docComment;method#compareUnsigned#0;class#Integer#0" expanded="false" />
+            <element signature="docComment;method#toUnsignedLong#0;class#Integer#0" expanded="false" />
+            <element signature="docComment;method#divideUnsigned#0;class#Integer#0" expanded="false" />
+            <element signature="method#divideUnsigned#0;class#Integer#0" expanded="false" />
+            <element signature="docComment;method#remainderUnsigned#0;class#Integer#0" expanded="false" />
+            <element signature="method#remainderUnsigned#0;class#Integer#0" expanded="false" />
+            <element signature="docComment;field#SIZE#0;class#Integer#0" expanded="false" />
+            <element signature="docComment;field#BYTES#0;class#Integer#0" expanded="false" />
+            <element signature="docComment;method#highestOneBit#0;class#Integer#0" expanded="false" />
+            <element signature="method#highestOneBit#0;class#Integer#0" expanded="false" />
+            <element signature="docComment;method#lowestOneBit#0;class#Integer#0" expanded="false" />
+            <element signature="method#lowestOneBit#0;class#Integer#0" expanded="false" />
+            <element signature="docComment;method#numberOfLeadingZeros#0;class#Integer#0" expanded="false" />
+            <element signature="method#numberOfLeadingZeros#0;class#Integer#0" expanded="false" />
+            <element signature="docComment;method#numberOfTrailingZeros#0;class#Integer#0" expanded="false" />
+            <element signature="method#numberOfTrailingZeros#0;class#Integer#0" expanded="false" />
+            <element signature="docComment;method#bitCount#0;class#Integer#0" expanded="false" />
+            <element signature="method#bitCount#0;class#Integer#0" expanded="false" />
+            <element signature="docComment;method#rotateLeft#0;class#Integer#0" expanded="false" />
+            <element signature="docComment;method#rotateRight#0;class#Integer#0" expanded="false" />
+            <element signature="docComment;method#reverse#0;class#Integer#0" expanded="false" />
+            <element signature="method#reverse#0;class#Integer#0" expanded="false" />
+            <element signature="docComment;method#signum#0;class#Integer#0" expanded="false" />
+            <element signature="method#signum#0;class#Integer#0" expanded="false" />
+            <element signature="docComment;method#reverseBytes#0;class#Integer#0" expanded="false" />
+            <element signature="method#reverseBytes#0;class#Integer#0" expanded="false" />
+            <element signature="docComment;method#sum#0;class#Integer#0" expanded="false" />
+            <element signature="docComment;method#max#0;class#Integer#0" expanded="false" />
+            <element signature="docComment;method#min#0;class#Integer#0" expanded="false" />
+            <element signature="docComment;field#serialVersionUID#0;class#Integer#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_112/src.zip!/java/util/stream/Stream.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="402">
+          <caret line="183" column="18" selection-start-line="183" selection-start-column="18" selection-end-line="183" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_112/src.zip!/java/util/Optional.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-316">
+          <caret line="172" column="27" selection-start-line="172" selection-start-column="27" selection-end-line="172" selection-end-column="27" />
+          <folding>
+            <element signature="docComment;class#Optional#0" expanded="false" />
+            <element signature="docComment;field#EMPTY#0;class#Optional#0" expanded="false" />
+            <element signature="docComment;field#value#0;class#Optional#0" expanded="false" />
+            <element signature="docComment;method#Optional#0;class#Optional#0" expanded="false" />
+            <element signature="docComment;method#empty#0;class#Optional#0" expanded="false" />
+            <element signature="method#empty#0;class#Optional#0" expanded="false" />
+            <element signature="docComment;method#Optional#1;class#Optional#0" expanded="false" />
+            <element signature="docComment;method#of#0;class#Optional#0" expanded="false" />
+            <element signature="docComment;method#ofNullable#0;class#Optional#0" expanded="false" />
+            <element signature="docComment;method#get#0;class#Optional#0" expanded="false" />
+            <element signature="method#get#0;class#Optional#0" expanded="false" />
+            <element signature="docComment;method#isPresent#0;class#Optional#0" expanded="false" />
+            <element signature="docComment;method#ifPresent#0;class#Optional#0" expanded="false" />
+            <element signature="method#ifPresent#0;class#Optional#0" expanded="false" />
+            <element signature="docComment;method#filter#0;class#Optional#0" expanded="false" />
+            <element signature="method#filter#0;class#Optional#0" expanded="false" />
+            <element signature="docComment;method#map#0;class#Optional#0" expanded="false" />
+            <element signature="method#map#0;class#Optional#0" expanded="false" />
+            <element signature="docComment;method#flatMap#0;class#Optional#0" expanded="false" />
+            <element signature="method#flatMap#0;class#Optional#0" expanded="false" />
+            <element signature="docComment;method#orElse#0;class#Optional#0" expanded="false" />
+            <element signature="docComment;method#orElseGet#0;class#Optional#0" expanded="false" />
+            <element signature="docComment;method#orElseThrow#0;class#Optional#0" expanded="false" />
+            <element signature="method#orElseThrow#0;class#Optional#0" expanded="false" />
+            <element signature="docComment;method#equals#0;class#Optional#0" expanded="false" />
+            <element signature="method#equals#0;class#Optional#0" expanded="false" />
+            <element signature="docComment;method#hashCode#0;class#Optional#0" expanded="false" />
+            <element signature="docComment;method#toString#0;class#Optional#0" expanded="false" />
+            <element signature="method#toString#0;class#Optional#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_112/src.zip!/java/util/stream/IntStream.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="477" column="18" selection-start-line="477" selection-start-column="18" selection-end-line="477" selection-end-column="18" />
+          <folding>
+            <element signature="docComment;class#IntStream#0" expanded="false" />
+            <element signature="docComment;method#filter#0;class#IntStream#0" expanded="false" />
+            <element signature="docComment;method#map#0;class#IntStream#0" expanded="false" />
+            <element signature="docComment;method#mapToObj#0;class#IntStream#0" expanded="false" />
+            <element signature="docComment;method#mapToLong#0;class#IntStream#0" expanded="false" />
+            <element signature="docComment;method#mapToDouble#0;class#IntStream#0" expanded="false" />
+            <element signature="docComment;method#flatMap#0;class#IntStream#0" expanded="false" />
+            <element signature="docComment;method#distinct#0;class#IntStream#0" expanded="false" />
+            <element signature="docComment;method#sorted#0;class#IntStream#0" expanded="false" />
+            <element signature="docComment;method#peek#0;class#IntStream#0" expanded="false" />
+            <element signature="docComment;method#limit#0;class#IntStream#0" expanded="false" />
+            <element signature="docComment;method#skip#0;class#IntStream#0" expanded="false" />
+            <element signature="docComment;method#forEach#0;class#IntStream#0" expanded="false" />
+            <element signature="docComment;method#forEachOrdered#0;class#IntStream#0" expanded="false" />
+            <element signature="docComment;method#toArray#0;class#IntStream#0" expanded="false" />
+            <element signature="docComment;method#reduce#0;class#IntStream#0" expanded="false" />
+            <element signature="docComment;method#reduce#1;class#IntStream#0" expanded="false" />
+            <element signature="docComment;method#collect#0;class#IntStream#0" expanded="false" />
+            <element signature="docComment;method#sum#0;class#IntStream#0" expanded="false" />
+            <element signature="docComment;method#min#0;class#IntStream#0" expanded="false" />
+            <element signature="docComment;method#max#0;class#IntStream#0" expanded="false" />
+            <element signature="docComment;method#count#0;class#IntStream#0" expanded="false" />
+            <element signature="docComment;method#average#0;class#IntStream#0" expanded="false" />
+            <element signature="docComment;method#summaryStatistics#0;class#IntStream#0" expanded="false" />
+            <element signature="docComment;method#anyMatch#0;class#IntStream#0" expanded="false" />
+            <element signature="docComment;method#allMatch#0;class#IntStream#0" expanded="false" />
+            <element signature="docComment;method#noneMatch#0;class#IntStream#0" expanded="false" />
+            <element signature="docComment;method#findFirst#0;class#IntStream#0" expanded="false" />
+            <element signature="docComment;method#findAny#0;class#IntStream#0" expanded="false" />
+            <element signature="docComment;method#asLongStream#0;class#IntStream#0" expanded="false" />
+            <element signature="docComment;method#asDoubleStream#0;class#IntStream#0" expanded="false" />
+            <element signature="docComment;method#boxed#0;class#IntStream#0" expanded="false" />
+            <element signature="docComment;method#builder#0;class#IntStream#0" expanded="false" />
+            <element signature="docComment;method#empty#0;class#IntStream#0" expanded="false" />
+            <element signature="docComment;method#of#0;class#IntStream#0" expanded="false" />
+            <element signature="docComment;method#of#1;class#IntStream#0" expanded="false" />
+            <element signature="docComment;method#iterate#0;class#IntStream#0" expanded="false" />
+            <element signature="method#iterate#0;class#IntStream#0" expanded="false" />
+            <element signature="class#29540:29870" expanded="false" />
+            <element signature="method#nextInt#0;class#29540:29870" expanded="false" />
+            <element signature="docComment;method#generate#0;class#IntStream#0" expanded="false" />
+            <element signature="method#generate#0;class#IntStream#0" expanded="false" />
+            <element signature="docComment;method#range#0;class#IntStream#0" expanded="false" />
+            <element signature="method#range#0;class#IntStream#0" expanded="false" />
+            <element signature="docComment;method#rangeClosed#0;class#IntStream#0" expanded="false" />
+            <element signature="method#rangeClosed#0;class#IntStream#0" expanded="false" />
+            <element signature="docComment;method#concat#0;class#IntStream#0" expanded="false" />
+            <element signature="method#concat#0;class#IntStream#0" expanded="false" />
+            <element signature="docComment;class#Builder#0;class#IntStream#0" expanded="false" />
+            <element signature="class#Builder#0;class#IntStream#0" expanded="false" />
+            <element signature="docComment;method#accept#0;class#Builder#0;class#IntStream#0" expanded="false" />
+            <element signature="docComment;method#add#0;class#Builder#0;class#IntStream#0" expanded="false" />
+            <element signature="method#add#0;class#Builder#0;class#IntStream#0" expanded="false" />
+            <element signature="docComment;method#build#0;class#Builder#0;class#IntStream#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_112/src.zip!/java/util/IntSummaryStatistics.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="148" column="29" selection-start-line="148" selection-start-column="29" selection-end-line="148" selection-end-column="29" />
+          <folding>
+            <element signature="docComment;class#IntSummaryStatistics#0" expanded="false" />
+            <element signature="docComment;method#IntSummaryStatistics#0;class#IntSummaryStatistics#0" expanded="false" />
+            <element signature="docComment;method#accept#0;class#IntSummaryStatistics#0" expanded="false" />
+            <element signature="method#accept#0;class#IntSummaryStatistics#0" expanded="false" />
+            <element signature="docComment;method#combine#0;class#IntSummaryStatistics#0" expanded="false" />
+            <element signature="method#combine#0;class#IntSummaryStatistics#0" expanded="false" />
+            <element signature="docComment;method#getCount#0;class#IntSummaryStatistics#0" expanded="false" />
+            <element signature="docComment;method#getSum#0;class#IntSummaryStatistics#0" expanded="false" />
+            <element signature="docComment;method#getMin#0;class#IntSummaryStatistics#0" expanded="false" />
+            <element signature="docComment;method#getMax#0;class#IntSummaryStatistics#0" expanded="false" />
+            <element signature="docComment;method#getAverage#0;class#IntSummaryStatistics#0" expanded="false" />
+            <element signature="method#toString#0;class#IntSummaryStatistics#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ua/itstep/shaptala/StreamExcersice.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2045">
-          <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        <state relative-caret-position="51">
+          <caret line="108" column="49" selection-start-line="108" selection-start-column="39" selection-end-line="108" selection-end-column="49" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ua/itstep/shaptala/StreamsDemo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="284" column="51" selection-start-line="284" selection-start-column="51" selection-end-line="284" selection-end-column="51" />
+          <folding>
+            <element signature="e#223#224#0" expanded="true" />
+            <element signature="e#262#263#0" expanded="true" />
+            <element signature="e#1640#1671#0" expanded="false" />
+            <element signature="e#2319#2359#0" expanded="false" />
+            <element signature="e#3095#3165#0" expanded="false" />
+            <element signature="e#3841#3898#0" expanded="false" />
+            <element signature="e#4465#4513#0" expanded="false" />
+            <element signature="e#4837#4885#0" expanded="false" />
+            <element signature="e#5678#5709#0" expanded="false" />
+            <element signature="e#5955#6003#0" expanded="false" />
+            <element signature="e#6931#6960#0" expanded="false" />
+            <element signature="e#7494#7516#0" expanded="false" />
+            <marker date="1488722122980" expanded="true" signature="421:511" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
