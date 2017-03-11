@@ -10,18 +10,7 @@ public class MulticastSenderDemo {
 	
 	public static void main(String[] args) throws Exception {
 			
-		DatagramSocket udpSocket = new DatagramSocket();		
-		
-		boolean run = true;
-		while (run) {			
-			byte[] msg = "Hello".getBytes();
-			DatagramPacket packet = new DatagramPacket(msg, msg.length);
-			packet.setSocketAddress(MCADDRESS);			
-			udpSocket.send(packet);		
-		}
-		System.out.println("Sent a multicast message.");
-		System.out.println("Exiting application");
-		udpSocket.close();		
+
 	}
 
 }

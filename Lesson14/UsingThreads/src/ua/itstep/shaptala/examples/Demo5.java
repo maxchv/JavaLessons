@@ -1,27 +1,39 @@
 package ua.itstep.shaptala.examples;
 
+import java.util.concurrent.locks.Lock;
+import java.util.concurrent.locks.ReentrantLock;
+
 public class Demo5 {
-
-	public static void main(String[] args) {
-		
-	}
-}
-
-class Singleton {
-	private int foo;
-	private String bar;
-
-	private static Singleton instance = null;
 	
-	private Singleton() {
-		foo = 13;
-		bar = "zap";
-	}
-	
-	public static Singleton getInstance() {
-		if(instance == null) {
-			instance = new Singleton();
-		}
-		return instance;
-	}
+    static class Friend {
+        private final String name;
+
+        public Friend(String name) {
+            this.name = name;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public synchronized void seyHi(Friend friend) {
+            System.out.format("%s: %s"
+                + " said hi to me!%n",
+                name, friend.getName());
+            friend.hiBack(this);
+        }
+        public synchronized void hiBack(Friend friend) {
+            System.out.format("%s: %s"
+                + " has said hi back to me!%n",
+                name, friend.getName());
+        }
+    }
+
+    public static void main(String[] args) {
+        final Friend petro = new Friend("Petro");
+        final Friend vano =  new Friend("Vano");
+        
+        new Thread(() -> petro.seyHi(vano)).start();
+        
+        new Thread(() -> vano.seyHi(petro)).start();
+    }
 }

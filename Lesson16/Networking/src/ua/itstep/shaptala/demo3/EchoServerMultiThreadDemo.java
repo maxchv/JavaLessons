@@ -29,27 +29,6 @@ class ThreadClient extends Thread {
 	
 	@Override
 	public void run() {
-		try(
-		PrintWriter out =
-		        new PrintWriter(clientSocket.getOutputStream(), true);
-		    BufferedReader in = new BufferedReader(
-		        new InputStreamReader(clientSocket.getInputStream()));
-		) {
-			System.out.println("Connected at: " + clientSocket.getRemoteSocketAddress());
-			String inputLine, outputLine;
-			out.println("This is simple echo server. Type Bye to exit.");
-			
-			while ((inputLine = in.readLine()) != null) {
-				System.out.println("["+LocalTime.now() + "] " + inputLine);
-		        outputLine = inputLine;
-		        out.println(outputLine);
-		        if (outputLine.equals("Bye") || isInterrupted()) {
-		            break;
-		        }		        
-		    }
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+
 	}
 }
