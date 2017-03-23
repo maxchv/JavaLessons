@@ -1,0 +1,8 @@
+03-23 19:56:36 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Синтаксическая ошибка в выражении SQL "CREATE DATABASE[*] TEST "; ожидалось "OR, FORCE, VIEW, ALIAS, SEQUENCE, USER, TRIGGER, ROLE, SCHEMA, CONSTANT, DOMAIN, TYPE, DATATYPE, AGGREGATE, LINKED, MEMORY, CACHED, LOCAL, GLOBAL, TEMP, TEMPORARY, TABLE, PRIMARY, UNIQUE, HASH, SPATIAL, INDEX"
+Syntax error in SQL statement "CREATE DATABASE[*] TEST "; expected "OR, FORCE, VIEW, ALIAS, SEQUENCE, USER, TRIGGER, ROLE, SCHEMA, CONSTANT, DOMAIN, TYPE, DATATYPE, AGGREGATE, LINKED, MEMORY, CACHED, LOCAL, GLOBAL, TEMP, TEMPORARY, TABLE, PRIMARY, UNIQUE, HASH, SPATIAL, INDEX"; SQL statement:
+CREATE database test [42001-178]
+03-23 19:58:03 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Таблица "USER" уже существует
+Table "USER" already exists; SQL statement:
+CREATE TABLE user (id int primary key auto_increment, first_name varchar(255), last_name varchar(255), age int) [42101-178]
