@@ -1,0 +1,38 @@
+[05.02.2017]
+Введение в Java
+https://youtu.be/dpeEA-x_rFs
+
+[12.02.2017]
+ООП
+https://youtu.be/kOtcXJ8bm7c
+
+[19.02.2017]
+https://youtu.be/6WmlG-DYLV4
+https://youtu.be/zc7gziuu758
+
+[26.02.2017]
+collections https://youtu.be/WOl0ZI79dg8
+gc	    https://youtu.be/HMBq7tV5JtU
+	    https://youtu.be/5exuwZnWzPE
+
+[05.03.2017]
+collectionStreams https://youtu.be/cXQ910WjNJc
+fileStreams	  https://youtu.be/_ROqy_FNHfo
+
+[12.03.2017]
+
+https://youtu.be/Vgp08VgGORc
+https://youtu.be/lN0iZ4ar5HM
+
+Thread2		https://youtu.be/0mRYsv58j64	
+Thread3		https://youtu.be/fTf8AxX40-I
+
+[19.03.2017]
+
+jdbc + servlets https://youtu.be/MZflJu_1lyo
+network	https://youtu.be/n6erLPZFS1c
+
+[26.03.2017]
+
+hibernate: https://youtu.be/BNkTatNt53w
+servlets:  https://youtu.be/poyAre64LFQ
