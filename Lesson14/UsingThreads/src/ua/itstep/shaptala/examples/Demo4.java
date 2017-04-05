@@ -5,16 +5,20 @@ public class Demo4 {
     public static void main(String[] args) throws InterruptedException {
         Account2 account = new Account2(0);
 
-        new Thread(() -> {
-            for (int i = 0; i < 50_000_000; i++) {
-                account.deposit(1);
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                for (int i = 0; i < 50_000_000; i++) {
+                    account.deposit(1);
+                }
             }
         }).start();
 
-        account.withdraw(50_000_000);
+        //account.withdraw(50_000_000);
 
         /* TODO: вызвать метод waitAndWithdraw()*/
-        //System.out.println("Calling waitAndWithdraw()...");
+        account.waitAndWithdraw(50_000_000);
+        System.out.println("Calling waitAndWithdraw()...");
 
         System.out.println("waitAntWithdraw() finished " + account.getBalance());
     }
@@ -43,6 +47,7 @@ class Account2 {
         checkAmountNonNegative(amount);
 
         balance += amount;
+        notifyAll(); // уведомить поток о изменении данных
     }
 
     private static void checkAmountNonNegative(long amount) {
@@ -51,9 +56,12 @@ class Account2 {
         }
     }
 
-    public void waitAndWithdraw(long amount) throws InterruptedException {
+    public synchronized void waitAndWithdraw(long amount) throws InterruptedException {
         /* TODO: Проверить достаточно ли денег */
-
+        while (balance < amount) {
+            wait(); // ожидать уведомления из другого потока
+        }
+        withdraw(amount);
     }
 
     public synchronized void withdraw(long amount) {
