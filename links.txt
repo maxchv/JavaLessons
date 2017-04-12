@@ -1,4 +1,4 @@
-Спсок практических заданий по java
+Спсок практических заданий по java http://math.sgu.ru/sites/chairs/prinf/materials/java/maintask.htm
 
 Диаграммы: http://www.falkhausen.de/en/diagram/diagram.html
 http://www.kgeorgiy.info/courses/java-advanced/
