@@ -18,16 +18,7 @@ public class StreamsDemo {
         String str = "Hello";
         for (int item : arr) {
             System.out.println("item = " + item);
-        }
-
-        Stream.of(1,2,3,4)
-                .forEach(StreamsDemo::consumer);
-
-        long count = Arrays.stream(arr)
-                .distinct()
-                .peek(System.out::println)
-                .count();
-        System.out.println("count = " + count);
+        }     
 
 //        IntStream.of(1,2,34);
 //        LongStream;
@@ -53,8 +44,7 @@ public class StreamsDemo {
 //        for (String item : stringCollection) {
 //            System.out.println("item = " + item);
 //        }
-        stringCollection.stream()
-                .forEach(System.out::println);
+      
     }
 
     private static void filterExample() {
@@ -71,11 +61,7 @@ public class StreamsDemo {
 //            System.out.println("item = " + item);
 //        }
 
-        List<String> res = stringCollection.stream()
-                .filter(item -> item.startsWith("a"))
-                .peek(System.out::println)
-                .collect(Collectors.toList());
-        //res.forEach(System.out::println);
+     
     }
 
     private static void sortExample() {
@@ -91,12 +77,7 @@ public class StreamsDemo {
 //        for (String item : res) {
 //            System.out.println("item = " + item);
 //        }
-        List<String> res = stringCollection.stream()
-                .peek(System.out::println)
-                .filter(item -> item.startsWith("a"))
-                .sorted(String::compareTo)
-                .peek(System.out::println)
-                .collect(Collectors.toList());
+       
     }
 
     private static List<Integer> mapExample() {
@@ -110,13 +91,7 @@ public class StreamsDemo {
 //            }
 //        }
 
-        List<Integer> intCollection = stringCollection.stream()
-                .filter(item -> item.length() == 4)
-                .map(item -> item.substring(3))
-                .map(Integer::valueOf)
-                .collect(Collectors.toList());
-
-        return intCollection;
+        return null;
     }
 
     private static void distinctExample(List<? extends Integer> intCollection) {
@@ -127,39 +102,32 @@ public class StreamsDemo {
 //                distinctList.add(item);
 //            }
 //        }
-        List<Integer> distinctList = intCollection.stream()
-                .distinct()
-                .collect(Collectors.toList());
-
-        distinctList.forEach(System.out::println);
+        
     }
 
     private static void matchExample() {
         System.out.format("%nMatch%n-----%n");
-        boolean isAnyWordStartA = stringCollection.stream()
-                .anyMatch(item -> item.startsWith("a"));
+
 //        for (String item : stringCollection) {
 //            if (item.startsWith("a")) {
 //                isAnyWordStartA = true;
 //                break;
 //            }
 //        }
-        System.out.println("isAnyWordStartA: " + isAnyWordStartA);
+//        System.out.println("isAnyWordStartA: " + isAnyWordStartA);
 
-        boolean isAllWordStartA = stringCollection.stream()
-                .allMatch(item -> item.startsWith("a"));;
+
 //        for (String item : stringCollection) {
 //            if (!item.startsWith("a")) {
 //                isAllWordStartA = false;
 //                break;
 //            }
 //        }
-        System.out.println("isAllWordStartA: " + isAllWordStartA);
+//        System.out.println("isAllWordStartA: " + isAllWordStartA);
 
-        boolean isNoneWordStartA = stringCollection.stream()
-                .noneMatch(item -> item.startsWith("a"));
 
-        System.out.println("isNoneWordStartA: " + isNoneWordStartA);
+
+//        System.out.println("isNoneWordStartA: " + isNoneWordStartA);
     }
 
     private static void minMaxExample(List<Integer> intCollection) {
@@ -171,15 +139,8 @@ public class StreamsDemo {
 //                maxInt = item;
 //            }
 //        }
-        Optional<Integer> opt = Optional.ofNullable(null);
-//        if(opt.isPresent()) {
-//            System.out.println(opt.get());
-//        }
-        opt.ifPresent(System.out::println);
-        Integer maxInt = intCollection.stream()
-                .max(Integer::compareTo).get();
 
-        System.out.println("max: " + maxInt);
+//        System.out.println("max: " + maxInt);
 
 //        Integer minInt = intCollection.get(0);
 //        for(Integer item: intCollection) {
@@ -187,26 +148,21 @@ public class StreamsDemo {
 //                minInt = item;
 //            }
 //        }
-        Integer minInt = intCollection.stream()
-                .mapToInt(Integer::valueOf)
-                .min().getAsInt();
 
-        System.out.println("min: " + minInt);
+//       System.out.println("min: " + minInt);
     }
 
     private static void countExample(List<Integer> intCollection) {
         System.out.format("%nCount%n-----%n");
         // count only even number
-        long countEven = intCollection.stream()
-                .filter(item -> item%2 == 0)
-                .count();
+
 //        for(Integer item: intCollection) {
 //            if(item % 2 == 0) {
 //                countEven++;
 //            }
 //        }
 
-        System.out.println("count: " + countEven);
+//        System.out.println("count: " + countEven);
     }
 
     private static void averageExample(List<Integer> intCollection) {
@@ -216,11 +172,8 @@ public class StreamsDemo {
 //            average += item;
 //        }
 //        average /= intCollection.size();
-        IntSummaryStatistics statistic = intCollection.stream()
-                .mapToInt(Integer::valueOf)
-                .summaryStatistics();
-        System.out.println("average = " + statistic.getAverage());
-        System.out.println("average = " + statistic.getSum());
+
+		// summaryStatistics
     }
 
     private static void reduceExample(List<Integer> intCollection) {
@@ -229,9 +182,7 @@ public class StreamsDemo {
 //        for(Integer item: intCollection) {
 //            sum = sum + item;
 //        }
-        int sum = intCollection.stream()
-                .reduce(0, (s, item) -> s + item);
-        System.out.println("sum: " + sum);
+//        System.out.println("sum: " + sum);
     }
 
     public static void main(String[] args) {
