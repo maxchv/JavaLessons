@@ -7,31 +7,22 @@ public class Demo2 {
 
     public static void main(String[] args) throws Exception {
         /* TODO: Создать экземпляр класса WorkedThread */
-        WorkedThread workedThread = new WorkedThread();
+
 
         /* TODO: Создать экземпляр класса SleeperThread */
-        SleeperThread sleeperThread = new SleeperThread();
+
 
         /* TODO: демоны??? */
-        sleeperThread.setDaemon(true);
-        workedThread.setDaemon(true);
 
         /* TODO: Запустить потоки */
         System.out.println("Starting threads at " + LocalTime.now());
-        sleeperThread.start();
-        workedThread.start();
 
         Thread.sleep(100L);
 
         /* TODO: Прервать потоки */
-		// System.out.println("Interrupting threads at " + LocalTime.now());
-        // sleeperThread.interrupt();// прервать работу спящего потока
-        // workedThread.interrupt();
+
 
 		/* TODO: Присоединить потоки */
-//		System.out.println("Joining threads");
-//        workedThread.join();
-//        sleeperThread.join();
 
         System.out.println(Thread.currentThread().getName() + " thread done at " + LocalTime.now());
     }
@@ -68,12 +59,7 @@ public class Demo2 {
         public void run() {
             System.out.println(getName() + " run at: " + LocalTime.now());
             /* TODO: Усыпить на 1000 мс */
-            try {
-                Thread.sleep(5000);
-            } catch (InterruptedException e) {
-                System.out.println("Sleep interrupted");
-                //e.printStackTrace();
-            }
+            // System.out.println("Sleep interrupted");
 
             System.out.println("End " + getName() + " at: " + LocalTime.now());
         }

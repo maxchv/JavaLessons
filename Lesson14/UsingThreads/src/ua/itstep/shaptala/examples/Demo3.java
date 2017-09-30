@@ -8,73 +8,58 @@ public class Demo3 {
         concurrencyRace();
     }
 
+    // Демонстрация проблемы борьбы за ресурсы
     private static void concurrencyRace() throws InterruptedException {
         Account account = new Account(100_000);
         System.out.println("Begin balance " + account.getBalance());
 
-        Thread withdrawThread = new Thread(new Runnable() {
-            @Override
-            public void run() {
-                for(int i=0; i<100_000; i++) {
-                    account.withdraw(1);
-                }
-            }
-        });
+        // TODO: Создать поток для снятия денег со счета
+        Thread withdrawThread = null;
 
-        Thread depositThread = new Thread(new Runnable() {
-            @Override
-            public void run() {
-                for(int i=0; i<100_000; i++) {
-                    account.deposit(1);
-                }
-            }
-        });
+        // TODO: Создать поток для внесения денег на счет
+        Thread depositThread = null;
 
-        withdrawThread.start();
-        depositThread.start();
+        if(withdrawThread != null) {
+            withdrawThread.start();
+        }
 
-        withdrawThread.join();
-        depositThread.join();
+        if(depositThread != null) {
+            depositThread.start();
+        }
+
+        if(withdrawThread != null) {
+            withdrawThread.join();
+        }
+        if(depositThread != null) {
+            depositThread.join();
+        }
 
         System.out.println("End balance " + account.getBalance());
     }
 }
 
 /**
- * ����� ����
+ * Банковский счет
  */
 class Account {
-    AtomicLong balance = new AtomicLong();
-
-    //private long balance;
-
-    //Object locker = new Object();
-
-    public Account() {
-        this(0L);
-    }
+    private long balance;
 
     public Account(long l) {
         this.setBalance(l);
     }
 
     public long getBalance() {
-        return balance.get();
+        return balance;
     }
 
     private void setBalance(long balance) {
-        this.balance.set(balance);
-        //this.balance = balance;
+        this.balance = balance;
     }
 
-    //public synchronized void deposit(long amount) throws IllegalArgumentException {
     public void deposit(long amount) throws IllegalArgumentException {
         checkAmountNonNegative(amount);
 
-        //synchronized (this) {
-            //balance += amount;
-            balance.addAndGet(amount);
-        //}
+        balance += amount;
     }
 
     private static void checkAmountNonNegative(long amount) throws IllegalArgumentException {
@@ -83,17 +68,14 @@ class Account {
         }
     }
 
-    //public synchronized void withdraw(long amount) throws IllegalArgumentException {
     public void withdraw(long amount) throws IllegalArgumentException {
-        //synchronized (this) {
+
         checkAmountNonNegative(amount);
 
-        if (balance.get() < amount) {
+        if (balance < amount) {
             throw new IllegalArgumentException("not enough money");
         }
 
-            //balance -= amount;
-            balance.addAndGet(-amount);
-        //}
+        balance -= amount;
     }
 }
