@@ -1,4 +1,5 @@
-package lambdasinaction.chap5;
+package org.itstep.java.collections.practice;
+
 public  class Trader{
 	
 	private String name;

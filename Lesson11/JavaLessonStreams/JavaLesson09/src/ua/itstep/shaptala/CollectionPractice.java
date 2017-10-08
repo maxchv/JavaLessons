@@ -1,13 +1,7 @@
-package lambdasinaction.chap5;
 
-import lambdasinaction.chap5.*;
+package org.itstep.java.collections.practice;
 
-import java.util.*;
-
-import static java.util.Comparator.comparing;
-import static java.util.stream.Collectors.toList;
-
-public class PuttingIntoPractice{
+public class CollectionPractice{
     public static void main(String ...args){    
         Trader raoul = new Trader("Raoul", "Cambridge");
         Trader mario = new Trader("Mario","Milan");
