@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>org.itstep.Client</OriginalElement>
+  <nodes>
+    <node x="0.0" y="363.0">org.itstep.Client</node>
+    <node x="203.0" y="113.0">org.itstep.service.DynamicMessageOfTheDayImpl</node>
+    <node x="426.0" y="102.0">org.itstep.service.MessagePrinterService</node>
+    <node x="0.0" y="244.0">org.itstep.service.ObjectFactory</node>
+    <node x="0.0" y="124.5">org.itstep.service.BasicMessageOfTheDayImpl</node>
+    <node x="220.0" y="0.0">org.itstep.service.MessageOfTheDayService</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="org.itstep.service.MessagePrinterService" target="org.itstep.service.MessageOfTheDayService">
+      <point x="0.0" y="-48.5" />
+      <point x="560.5" y="77.0" />
+      <point x="360.83333333333337" y="77.0" />
+      <point x="56.33333333333337" y="26.0" />
+    </edge>
+    <edge source="org.itstep.service.DynamicMessageOfTheDayImpl" target="org.itstep.service.MessageOfTheDayService">
+      <point x="0.0" y="-37.5" />
+      <point x="0.0" y="26.0" />
+    </edge>
+    <edge source="org.itstep.service.BasicMessageOfTheDayImpl" target="org.itstep.service.MessageOfTheDayService">
+      <point x="0.0" y="-26.0" />
+      <point x="91.5" y="77.0" />
+      <point x="248.16666666666666" y="77.0" />
+      <point x="-56.33333333333334" y="26.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.7000000000000002" x="384.71568627450966" y="192.578431372549" />
+  <SelectedNodes>
+    <node>org.itstep.Client</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Constructors</Category>
+    <Category>Fields</Category>
+    <Category>Methods</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

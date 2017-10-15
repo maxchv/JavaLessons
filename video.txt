@@ -1,3 +1,0 @@
-jdbc: https://youtu.be/OCSvErhUpA4
-udb: https://youtu.be/gODAfwEcMN4
-servlets: https://youtu.be/V-_8rtF7Plg

@@ -1,0 +1,33 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="jetty-demo:war exploded">
+    <output-path>$PROJECT_DIR$/target/jetty-demo</output-path>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="jetty-demo" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="Maven: org.eclipse.jetty:jetty-annotations:9.4.7.v20170914" />
+          <element id="library" level="project" name="Maven: org.eclipse.jetty:jetty-plus:9.4.7.v20170914" />
+          <element id="library" level="project" name="Maven: org.eclipse.jetty:jetty-jndi:9.4.7.v20170914" />
+          <element id="library" level="project" name="Maven: org.eclipse.jetty:jetty-util:9.4.7.v20170914" />
+          <element id="library" level="project" name="Maven: org.eclipse.jetty:jetty-webapp:9.4.7.v20170914" />
+          <element id="library" level="project" name="Maven: org.eclipse.jetty:jetty-xml:9.4.7.v20170914" />
+          <element id="library" level="project" name="Maven: org.eclipse.jetty:jetty-servlet:9.4.7.v20170914" />
+          <element id="library" level="project" name="Maven: org.eclipse.jetty:jetty-security:9.4.7.v20170914" />
+          <element id="library" level="project" name="Maven: org.eclipse.jetty:jetty-server:9.4.7.v20170914" />
+          <element id="library" level="project" name="Maven: org.eclipse.jetty:jetty-http:9.4.7.v20170914" />
+          <element id="library" level="project" name="Maven: org.eclipse.jetty:jetty-io:9.4.7.v20170914" />
+          <element id="library" level="project" name="Maven: javax.annotation:javax.annotation-api:1.2" />
+          <element id="library" level="project" name="Maven: org.ow2.asm:asm:5.1" />
+          <element id="library" level="project" name="Maven: org.ow2.asm:asm-commons:5.1" />
+          <element id="library" level="project" name="Maven: org.ow2.asm:asm-tree:5.1" />
+        </element>
+      </element>
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/target/jetty-demo/META-INF/MANIFEST.MF" />
+      </element>
+      <element id="javaee-facet-resources" facet="jetty-demo/web/Web" />
+    </root>
+  </artifact>
+</component>

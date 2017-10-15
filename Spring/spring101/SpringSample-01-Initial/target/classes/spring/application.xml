@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean class="org.itstep.service.BasicMessageOfTheDayImpl" name="basicMessageOfTheDay">
+        <property name="message" value="Hello World"/>
+    </bean>
+
+    <bean class="org.itstep.service.DynamicMessageOfTheDayImpl" name="dynamicMessageOfTheDay">
+        <constructor-arg name="messages">
+            <array value-type="java.lang.String">
+                <value>One</value>
+                <value>Two</value>
+                <value>Three</value>
+                <value>Four</value>
+                <value>Five</value>
+                <value>Six</value>
+                <value>Seven</value>
+            </array>
+        </constructor-arg>
+    </bean>
+
+    <bean class="org.itstep.service.MessagePrinter" name="basicMessagePrinter">
+        <property name="service" ref="basicMessageOfTheDay"/>
+    </bean>
+
+    <bean class="org.itstep.service.MessagePrinter" name="dynamicMessagePrinter">
+        <property name="service" ref="dynamicMessageOfTheDay"/>
+    </bean>
+
+</beans>

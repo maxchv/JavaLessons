@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>org.itstep.Client</OriginalElement>
+  <nodes>
+    <node x="203.0" y="80.0">org.itstep.service.DynamicMessageOfTheDayImpl</node>
+    <node x="265.8" y="160.0">org.itstep.Client</node>
+    <node x="426.0" y="80.0">org.itstep.service.MessagePrinterService</node>
+    <node x="220.0" y="0.0">org.itstep.service.MessageOfTheDayService</node>
+    <node x="0.0" y="80.0">org.itstep.service.BasicMessageOfTheDayImpl</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="org.itstep.Client" target="org.itstep.service.BasicMessageOfTheDayImpl">
+      <point x="-16.25" y="-15.0" />
+      <point x="282.05" y="135.0" />
+      <point x="91.5" y="135.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="org.itstep.service.MessagePrinterService" target="org.itstep.service.MessageOfTheDayService">
+      <point x="0.0" y="-15.0" />
+      <point x="502.0" y="55.0" />
+      <point x="360.83333333333337" y="55.0" />
+      <point x="56.33333333333337" y="15.0" />
+    </edge>
+    <edge source="org.itstep.Client" target="org.itstep.service.MessagePrinterService">
+      <point x="16.25" y="-15.0" />
+      <point x="314.55" y="135.0" />
+      <point x="502.0" y="135.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="org.itstep.service.DynamicMessageOfTheDayImpl" target="org.itstep.service.MessageOfTheDayService">
+      <point x="0.0" y="-15.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="org.itstep.service.BasicMessageOfTheDayImpl" target="org.itstep.service.MessageOfTheDayService">
+      <point x="0.0" y="-15.0" />
+      <point x="91.5" y="55.0" />
+      <point x="248.16666666666669" y="55.0" />
+      <point x="-56.33333333333334" y="15.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="2.3000000000000007" x="274.26086956521726" y="73.6026043062993" />
+  <SelectedNodes />
+  <Categories />
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
