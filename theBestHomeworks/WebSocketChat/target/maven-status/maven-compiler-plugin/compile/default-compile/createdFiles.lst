@@ -1,0 +1,9 @@
+encoders\UserEncoder.class
+websockets\ChatWebSocket.class
+models\CheckerMessage.class
+encoders\CheckerMessageEncoder.class
+decoders\MessageDecoder.class
+models\User.class
+encoders\UserMessageEncoder.class
+models\Message.class
+models\UserMessage.class
