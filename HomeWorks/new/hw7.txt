@@ -1,0 +1,4 @@
+виедо: https://youtu.be/ROhSAvAWfGU
+
+¬ последнем домашнем задании добавить обработку ошибок: 404 
+и исключений java.sql.SQLException.

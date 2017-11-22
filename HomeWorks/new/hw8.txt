@@ -1,0 +1,59 @@
+видео: 	https://youtu.be/uC8Nxyto7C4
+	https://youtu.be/Q-h2r8FMwbs
+
+
+Есть проект с такой структурой: 
+
+файл IWriter.java:
+
+package org.itstep.writer;
+
+public interface IWriter {
+    public void writer(String s);
+}
+
+
+файл Writer.java:
+
+package org.itstep.writer;
+
+public class Writer implements IWriter {
+    public void writer (String s){
+        System.out.println(s);
+    }
+}
+
+файл NiceWriter.java:
+
+package org.itstep.writer;
+
+public class NiceWriter implements IWriter {
+    public void writer (String s){
+        System.out.println("The string is " + s);
+    }
+}
+
+
+файл MySpringBeanWithDependency.java
+
+package testbean;
+
+import writer.IWriter;
+
+public class MySpringBeanWithDependency {
+    private IWriter writer;
+
+    public void setWriter(IWriter writer) {
+        this.writer = writer;
+    }
+
+    public void run() {
+        String s = "This is my test";
+        writer.writer(s);
+    }
+}
+
+Сконфигурировать это приложение внедрив зависимость в бин MySpringBeanWithDependency
+от NiceWriter.
+Для сконфигурированного бина MySpringBeanWithDependency вызвать метод run()
+	

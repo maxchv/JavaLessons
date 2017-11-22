@@ -1,0 +1,17 @@
+видео: 	https://youtu.be/EpSmOeXf4dM
+	https://youtu.be/XG5bkzZO7Ec
+
+¬ продолжении последнего домашнего задани€ о студентах.
+
+1. »зменить конфигурацию с применением аннотаций и автоприв€зок
+2. —оздать mvc проект дл€ работы с базой данных студентов
+3. ƒобавить контроллер HomeController, со ссылкой /students
+4. ¬ контроллер StudentController добавить методы:
+	a) index (по ссылке /students и методу GET)
+	b) add (по ссылке /students/add и методу POST)
+	c) delete (по ссылке /students/delete и методу DELETE)
+	d) update (по ссылке /students/update и методу PUT)
+5.  аждый метод должен возвращать соответствующее представление размещенное в
+папке /WEB-INF/view
+
+PS. –аботу с модел€ми в контроллере StudentController не реализовывать - только возвращать view

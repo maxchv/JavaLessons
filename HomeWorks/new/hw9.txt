@@ -1,0 +1,86 @@
+видео:	https://youtu.be/I6tEFvof_9w
+	https://youtu.be/wGiCo61ZPf4
+
+Домашнее задание:
+
+Есть класс Student:
+
+public class Student {
+   private Integer id;
+   private String name;
+   private int age;
+ 
+   // сеттеры и геттеры реализовать самостоятельно
+	
+}
+
+Есть интерфейс, который определяет DAO студента:
+
+public interface StudentDao {
+   List<Student> findAll();
+   Integer save(Student student);	
+   Student find(int id);
+   void update(Student student);
+   void delete(Student student);
+}
+
+Пример реализации DAO для хранения студентов в памяти:
+
+public class StudentDaoMemoryImpl implements StudentDao {
+   
+   List<Student> students;
+
+   public StudentDaoMemoryImpl (){
+      students = new ArrayList<Student>();
+      Student student1 = new Student("Robert",0);
+      Student student2 = new Student("John",1);
+      students.add(student1);
+      students.add(student2);		
+   }
+
+   @Override
+   public Integer save(Student student) {
+      	student.setId(students.size() + 1);
+	students.add(student);
+	return student.getId();
+   }
+
+   @Override
+   public void delete(Student student) {
+      students.remove(student.getId());
+   }
+
+   @Override
+   public List<Student> findAll() {
+      return students;
+   }
+
+   @Override
+   public Student find(int id) {
+      Student student = null;
+      for(Student s: students) {
+	if(s.getId() == id) {
+	   student = s;
+	   break;
+        }
+      }
+      return student;
+   }
+
+   @Override
+   public void update(Student student) {
+	Student oldStudent = find(student.getId());
+        oldStudent.setName(student.getName());
+        oldStudent.setAge(student.getAge());
+
+   }
+}
+
+
+Необходимо:
+
+	1. Реализовать класс StudentDaoMySqlImpl для хранения даннхы в базе данных MySql
+	2. Создать сервис класс который будет использовать StudentDAO
+	3. Сконфигурировать один сервис класс на работу с DAO в памяти, второй - на работу с DAO в СУБД.
+
+Что такое DAO: http://www.dokwork.ru/2014/02/daotalk.html	

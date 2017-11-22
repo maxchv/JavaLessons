@@ -1,0 +1,33 @@
+видео: https://youtu.be/sAA9GndTGAk
+
+ѕознакомитс€ с проектом lobmok: https://projectlombok.org/
+
+—оздать базу данных ebookshop со следущими таблицами:
+
+Database: ebookshop
+Table: books
++-------+----------------------------+---------------+---------+-------+
+| id    | title                      | author        | price   | qty   |
+| (INT) | (VARCHAR(50))              | (VARCHAR(50)) | (FLOAT) | (INT) |
++-------+----------------------------+---------------+---------+-------+
+| 1001  | Java for dummies           | Tan Ah Teck   | 11.11   | 11    |
+| 1002  | More Java for dummies      | Tan Ah Teck   | 22.22   | 22    |
+| 1003  | More Java for more dummies | Mohammad Ali  | 33.33   | 33    |
+| 1004  | A Cup of Java              | Kumar         | 44.44   | 44    |
+| 1005  | A Teaspoon of Java         | Kevin Jones   | 55.55   | 55    |
++-------+----------------------------+---------------+---------+-------+
+  
+Database: ebookshop
+Table: order_records
++-------+-------------+---------------+---------------+------------+
+| id    | qty_ordered | cust_name     | cust_email    | cust_phone |
+| (INT) | (INT)       | (VARCHAR(30)) | (VARCHAR(30)) | CHAR(8)    |
++-------+-------------+---------------+---------------+------------+
+
+–еализовать простой интернет магазин книг с интерфейсом представленным 
+на изображени€х Page_01.png, Page_02.png и Page_03.png.
+
+»спользовать spring-mvc, spring-jdbc и NamedParameterJdbcTemplate дл€ доступа
+к данным в mysql
+
+ƒополнительный бонус за стилизацию (css, js) магазина.
