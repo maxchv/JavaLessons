@@ -1,0 +1,4 @@
+https://youtu.be/5stWd5MjBgA
+
+Реализовать TODO из классного примера 
+Протестировать MemoryDatabase в main

@@ -1,0 +1,16 @@
+https://youtu.be/RrPExG_RmKc
+
+Самостоятельно опробовать стили
+vertical-align
+font
+letter-spacing
+line-height
+text-intent
+text-transform
+white-space
+word-spacing
+
+Отформатировать текст в Вашем резюме из предыдущего домашнего задания при помощи CSS, используя тег style в head, или аттрибуты style. Тег style предпочтительней.
+
+
+

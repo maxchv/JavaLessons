@@ -1,0 +1,6 @@
+https://youtu.be/zMLskeOiUxo
+
+Для проекта FileEntityText:
+
+- Реализуйте метод readAll для TextFileVisaAccessor.
+- * Реализуйте интерфейс PassportService

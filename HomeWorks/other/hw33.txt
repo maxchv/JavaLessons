@@ -1,0 +1,4 @@
+https://youtu.be/n2x-Fl116YI
+
+Учим коллекции, звоню в 3 ночи и спрашиваю :)
+Пишем конспект, обзорно о том что такое InputStream, OutputStream, Reader, Writer, Closeable, Flushable.

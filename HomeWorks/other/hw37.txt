@@ -1,0 +1,3 @@
+https://youtu.be/64UavspCF18
+
+¬ыполнить сериализацию в файл и десериализацию базы данных автомобилей, использу€ механизмы ObjectInputStream и ObjectOutputStream
